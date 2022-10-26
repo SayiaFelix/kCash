@@ -11,6 +11,12 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { FooterComponent } from './footer/footer.component';
+import { KryptoPriceComponent } from './krypto-price/krypto-price.component';
+import { KryptoPriceDetailComponent } from './krypto-price-detail/krypto-price-detail.component';
+import { NgToastModule } from 'ng-angular-popup';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -22,11 +28,19 @@ import { FooterComponent } from './footer/footer.component';
     DashboardComponent,
     AboutusComponent,
     NotfoundComponent,
-    FooterComponent
+    FooterComponent,
+    KryptoPriceComponent,
+    KryptoPriceDetailComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgToastModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule,
+    BrowserAnimationsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
