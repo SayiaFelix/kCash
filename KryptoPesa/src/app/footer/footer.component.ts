@@ -1,4 +1,8 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { NgToastService } from 'ng-angular-popup';
 
 @Component({
   selector: 'app-footer',
@@ -6,10 +10,31 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent implements OnInit {
-
-  constructor() { }
+  public subscribeForm!: FormGroup; 
+  isSubmit =true;
+  submittedMessage='';
+  constructor(private fb:FormBuilder,
+     private http:HttpClient,
+      private router:Router,
+      private toast: NgToastService
+      ) { }
 
   ngOnInit(): void {
+    this.subscribeForm= this.fb.group({
+      email: ['', [Validators.required,Validators.email]],
+     
+    });
+  }
+
+  subscribeMessage(value:any){
+  console.log(value)
+  this.isSubmit = true;
+  this.submittedMessage ='Submitted Successfully';
+  this.toast.success({detail:'SUCCESS!!!!',summary:"SUBSCRIBED SUCCESSFULLY!!",duration:3000})
+
+  setTimeout(()=>{
+    this.isSubmit = false;
+  },5000);
   }
 
 }
