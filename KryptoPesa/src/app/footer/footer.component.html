@@ -39,21 +39,12 @@
                 <h3>Subscribe Newslatters</h3>
                 <p>Lorem Ipsum is simply dummy the printing and industry.</p>
                 <div class="subscribe_form">
-                      <form action="#" [formGroup]="subscribeForm" class="subscribe_form">
-                          <div class="form-group mb-2"  [class.error]="subscribeForm.controls['email'].dirty && subscribeForm.hasError('required','email')">
-                              <label for="name">Email</label> 
-                              <br>
-                              <input class="form-control form_input" formControlName="email" placeholder="Email Address..." type="email" required="required">
-                          </div> 
+                    <form action="#" [formGroup]="subscribeForm" class="subscribe_form">
+                        <div class="form-group mb-2"  [class.error]="subscribeForm.controls['email'].dirty && subscribeForm.hasError('required','email')">
+                         <input class="form-control form_input" formControlName="email" placeholder="Email Address..." type="email" required="required">
+                        </div> 
                       <small  *ngIf="subscribeForm.controls['email'].dirty && subscribeForm.hasError('required','email')"  class="text-danger">Email is required</small>
-                      <div class="clearfix"></div>
-                              <div id="subscribe-result">
-                                  <p class="subscription-success"></p>
-                                  <p class="subscription-error"></p>
-                              </div>
                       <button  type="reset"  class="submit" [disabled]="subscribeForm.invalid"  (click)="subscribeMessage(subscribeForm.value)" class="btn btn-sm btn-outline-success mt-1">SUBSCRIBE</button>
-                      
-                       
                     </form>
                 </div>
                 <!-- Subscribe Form -->
