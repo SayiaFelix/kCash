@@ -1,1 +1,46 @@
-<p>login works!</p>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel card p-2">
+                 <h1 class="text-center ">Login</h1>
+            <hr>
+            <div class="panel-body">
+               <form [formGroup]="LoginForm" (ngSubmit)="login()">
+                    <div class="form-group mb-2" [class.error]="LoginForm.controls['email'].dirty && LoginForm.hasError('required','email')">
+                        <label for="name">Email</label>
+                         <br>
+                        <div class="input-field">
+                            <span class="fa-solid fa-envelope p-2"></span> 
+                            <input class="form-control" placeholder="Email"  formControlName="email" type="text" required="required">
+                        </div>
+                    </div>
+                    <small  *ngIf="LoginForm.controls['email'].dirty && LoginForm.hasError('required','email')"  class="text-danger">Email is required</small>
+                
+                    <div class="form-group mt-3"  [class.error]="LoginForm.controls['password'].dirty && LoginForm.hasError('required','password')">
+
+                        <label  for="complete">Password</label> <br>
+                        <!-- <i class="fa-solid fa-lock"></i> -->
+                        <input class="form-control" formControlName="password"  type='password'  required>
+            
+                    </div>
+                    <small *ngIf="LoginForm.controls['password'].dirty && LoginForm.hasError('required','password')"  class="text-danger">Password is required</small>
+                  <div class="form-inline fr mt-3">
+                    <a href="" class="fs-5 fw-bold">Forget Password </a>
+                  </div>
+                    <div class="mt-4 text-center">
+                        <p>Dont have an account ?? <br><a href="/signup">Signup</a></p>
+                    </div>
+                    <button  type="submit" class="btn btn-lg btn-outline-success mt-1">Login</button>
+                </form>
+            </div>
+           
+            </div>
+           
+        </div>
+
+
+
+
+    </div>
+  </div>
