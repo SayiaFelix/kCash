@@ -26,7 +26,7 @@
                     </div>
                     <small *ngIf="LoginForm.controls['password'].dirty && LoginForm.hasError('required','password')"  class="text-danger">Password is required</small>
                   <div class="form-inline fr mt-3">
-                    <a href="" class="fs-5 fw-bold">Forget Password </a>
+                    <a routerLink="/forget-password" class="fs-5 fw-bold">Forget Password </a>
                   </div>
                     <div class="mt-4 text-center">
                         <p>Dont have an account ?? <br><a href="/signup">Signup</a></p>

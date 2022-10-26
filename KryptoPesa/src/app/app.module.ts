@@ -17,6 +17,7 @@ import { NgToastModule } from 'ng-angular-popup';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ForgetPasswordComponent } from './forget-password/forget-password.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NotfoundComponent,
     FooterComponent,
     KryptoPriceComponent,
-    KryptoPriceDetailComponent
+    KryptoPriceDetailComponent,
+    ForgetPasswordComponent
   ],
   imports: [
     BrowserModule,
