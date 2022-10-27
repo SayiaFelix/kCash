@@ -41,7 +41,7 @@
               <span class="eyeicon" (click)="viewpass()"><i  [ngClass]="visible?'fa-solid fa-eye':'fa-solid fa-eye-slash'"></i></span>
             </div>
             <small *ngIf="SignupForm.controls['cpassword'].dirty && SignupForm.hasError('required','cpassword')"  class="text-danger">Cornfirm Password is required</small>
-            <small *ngIf="SignupForm.controls['cpassword'].dirty && SignupForm.hasError('MatchPass','cpassword')"  class="text-danger">Cornfirm Password did not match</small>
+            <small *ngIf="SignupForm.controls['cpassword'].dirty && SignupForm.hasError('MatchPass','cpassword')"  class="text-danger">Password did not Match</small>
 
             <div class="mt-4 text-center">
               <p> <a  routerLink="/login" class="text-light">Already have an account?</a></p>

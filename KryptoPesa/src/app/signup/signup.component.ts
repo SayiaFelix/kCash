@@ -4,6 +4,7 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { Router } from '@angular/router';
 import { NgToastService } from 'ng-angular-popup';
 import ValidateForm from '../Helper/validateForm';
+import { AuthService } from '../service/auth.service';
 
 @Component({
   selector: 'app-signup',
@@ -21,11 +22,11 @@ export class SignupComponent implements OnInit {
     this.changepass=!this.changepass;
   }
 
-  MatchPass(controlName:string, matchingControlName:string){
+  MatchPass(passName:string, confirmPassName:string){
     return(formGroup:FormGroup)=>{
 
-      const control=formGroup.controls[controlName];
-      const matchingControl=formGroup.controls[matchingControlName];
+      const control=formGroup.controls[passName];
+      const matchingControl=formGroup.controls[confirmPassName];
 
       if(matchingControl.errors && !matchingControl.errors['MatchPass']){
         return
@@ -47,7 +48,8 @@ export class SignupComponent implements OnInit {
     private fb:FormBuilder,
     private http:HttpClient,
     private router:Router,
-    private toast:NgToastService
+    private toast:NgToastService,
+    private auth: AuthService
     ) { }
 
   ngOnInit(): void {

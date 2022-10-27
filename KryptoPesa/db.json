@@ -97,6 +97,12 @@
     {
       "contact": 564768,
       "id": 19
+    },
+    {
+      "email": "admin@demo.com",
+      "password": "demo12345",
+      "cpassword": "demo12345",
+      "id": 20
     }
   ],
   "comments": [
