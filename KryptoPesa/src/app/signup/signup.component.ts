@@ -13,6 +13,15 @@ export class SignupComponent implements OnInit {
 
   public SignupForm!: FormGroup; 
 
+
+  visible:boolean=false;
+  changepass:boolean = true;
+
+  viewpass(){
+    this.visible = !this.visible;
+    this.changepass=!this.changepass;
+  }
+
   MatchPass(controlName:string, matchingControlName:string){
     return(formGroup:FormGroup)=>{
 
@@ -47,7 +56,7 @@ export class SignupComponent implements OnInit {
       firstname: ['', Validators.required],
       lastname: ['', Validators.required],
       email: ['', [Validators.required,Validators.email]],
-      username: ['', Validators.required],
+      // username: ['', Validators.required],
       password: ['', [Validators.required,Validators.minLength(8)]],
       cpassword: ['', Validators.required]
   }
@@ -55,7 +64,7 @@ export class SignupComponent implements OnInit {
     validators: this.MatchPass('password','cpassword')
   })
   }
-  
+
   Signup(){
     if(this.SignupForm.valid){
       console.log(this.SignupForm.value);

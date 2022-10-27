@@ -1,6 +1,13 @@
 {
   "users": [
-
+    {
+      "firstname": "Felix",
+      "lastname": "Sayia",
+      "email": "admin@demo.com",
+      "password": "demo12345",
+      "cpassword": "demo12345",
+      "id": 1
+    }
   ],
   "comments": [
     {

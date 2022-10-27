@@ -1,5 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
-
+.eyeicon{
+    position: absolute;
+    margin-top: -30px;
+    float: left;
+    margin-left: 92%;
+    cursor: pointer;
+}
 .button_1 {
     background-color: #f9b707;
     color: #fff;
