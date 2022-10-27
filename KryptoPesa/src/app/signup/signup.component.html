@@ -24,7 +24,8 @@
               <input class="form-control" type="email" formControlName="email"  required>      
       </div>  
       <small *ngIf="SignupForm.controls['email'].dirty && SignupForm.hasError('required','email')"  class="text-danger">Email is required</small>
-        <div class="form-group mb-2" [class.error]="SignupForm.controls['username'].dirty && SignupForm.hasError('required','username')">
+        
+      <div class="form-group mb-2" [class.error]="SignupForm.controls['username'].dirty && SignupForm.hasError('required','username')">
               <label for="name">Username</label> <br>
               <input  class="form-control" formControlName="username" type="text" required="required">
           </div>
@@ -35,6 +36,17 @@
               <input  class="form-control" formControlName="password"  type='password'  required>
           </div>
           <small *ngIf="SignupForm.controls['password'].dirty && SignupForm.hasError('required','password')"  class="text-danger">Password is required</small>
+          <small *ngIf="SignupForm.controls['password'].dirty && SignupForm.hasError('minlength','password')"  class="text-danger">Password Must be atleast 8.</small>
+
+          <div class="form-group mt-3"  [class.error]="SignupForm.controls['cpassword'].dirty && SignupForm.hasError('required','cpassword')">
+            <label for="complete">Confirm Password</label> <br>
+            <input  class="form-control" formControlName="cpassword"  type='password'  required>
+        </div>
+        <small *ngIf="SignupForm.controls['cpassword'].dirty && SignupForm.hasError('required','cpassword')"  class="text-danger">Cornfirm Password is required</small>
+        <small *ngIf="SignupForm.controls['cpassword'].dirty && SignupForm.hasError('MatchPass','cpassword')"  class="text-danger">Cornfirm Password did not match</small>
+
+
+
           <div class="mt-4 text-center">
                 <p> Already have an account?? <br> <a href="/login">Login</a></p>
           </div>

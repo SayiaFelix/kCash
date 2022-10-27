@@ -10,7 +10,30 @@ import { NgToastService } from 'ng-angular-popup';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit {
+
   public SignupForm!: FormGroup; 
+
+  MatchPass(controlName:string, matchingControlName:string){
+    return(formGroup:FormGroup)=>{
+
+      const control=formGroup.controls[controlName];
+      const matchingControl=formGroup.controls[matchingControlName];
+
+      if(matchingControl.errors && !matchingControl.errors['MatchPass']){
+        return
+      }
+
+      if(control.value !== matchingControl.value){
+        matchingControl.setErrors({MatchPass:true});
+      }
+      else{
+        matchingControl.setErrors(null);
+      }
+    }
+
+  }
+
+
   constructor
   (
     private fb:FormBuilder,
@@ -23,12 +46,16 @@ export class SignupComponent implements OnInit {
     this.SignupForm= this.fb.group({
       firstname: ['', Validators.required],
       lastname: ['', Validators.required],
-      email: ['', Validators.required],
+      email: ['', [Validators.required,Validators.email]],
       username: ['', Validators.required],
-      password: ['', Validators.required]
-  })
-
+      password: ['', [Validators.required,Validators.minLength(8)]],
+      cpassword: ['', Validators.required]
   }
+  ,{
+    validators: this.MatchPass('password','cpassword')
+  })
+  }
+  
   Signup(){
     if(this.SignupForm.valid){
       console.log(this.SignupForm.value);
