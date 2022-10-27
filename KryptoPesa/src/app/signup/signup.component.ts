@@ -12,8 +12,6 @@ import { NgToastService } from 'ng-angular-popup';
 export class SignupComponent implements OnInit {
 
   public SignupForm!: FormGroup; 
-
-
   visible:boolean=false;
   changepass:boolean = true;
 
@@ -53,10 +51,9 @@ export class SignupComponent implements OnInit {
 
   ngOnInit(): void {
     this.SignupForm= this.fb.group({
-      firstname: ['', Validators.required],
-      lastname: ['', Validators.required],
+      // firstname: ['', Validators.required],
+      // lastname: ['', Validators.required],
       email: ['', [Validators.required,Validators.email]],
-      // username: ['', Validators.required],
       password: ['', [Validators.required,Validators.minLength(8)]],
       cpassword: ['', Validators.required]
   }
@@ -70,21 +67,18 @@ export class SignupComponent implements OnInit {
       console.log(this.SignupForm.value);
       this.http.post<any>("http://localhost:3000/users/",this.SignupForm.value)
       .subscribe(res=>{
-        this.toast.success({detail:'Success Message',summary:"Sign In Successfully!!",duration:5000})
+        this.toast.success({detail:'Success Message',summary:"Email Added Successfully!!",duration:5000})
         // alert('Signup successfully');
         this.SignupForm.reset();
-       this.router.navigate(['login']);
+       this.router.navigate(['sign']);
        },err=>{
-        this.toast.error({detail:'Failed Message',summary:"Sign In Failed, Something Went wrong!!",duration:5000})
+        this.toast.error({detail:'Failed Message',summary:"Email Failed, Something Went wrong!!",duration:5000})
         // alert('something went wrong')
   
      })
       // send obj to db
   
     }else{
-      // console.log('Form is not valid')
-      // through an error
-  
       this.validateAllFormFields(this.SignupForm)
       alert('Form is  invalid')
     }

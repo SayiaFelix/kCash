@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutusComponent } from './aboutus/aboutus.component';
+import { ContactNumberComponent } from './contact-number/contact-number.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ForgetPasswordComponent } from './forget-password/forget-password.component';
 import { HomepageComponent } from './homepage/homepage.component';
@@ -8,6 +9,7 @@ import { KryptoPriceComponent } from './krypto-price/krypto-price.component';
 import { LoginComponent } from './login/login.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { SignupComponent } from './signup/signup.component';
+import { Signup2Component } from './signup2/signup2.component';
 
 const routes: Routes = [
 
@@ -15,6 +17,8 @@ const routes: Routes = [
   
   {path:'login',component:LoginComponent},
   {path:'signup',component:SignupComponent},
+  {path:'sign',component:Signup2Component},
+  {path:'addContact',component:ContactNumberComponent},
   {path:'forget-password',component:ForgetPasswordComponent},
 
   {path:'homepage',component:HomepageComponent},

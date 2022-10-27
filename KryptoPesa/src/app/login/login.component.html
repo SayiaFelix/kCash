@@ -8,19 +8,14 @@
             <div class="panel-body">
                <form [formGroup]="LoginForm" (ngSubmit)="login()">
                     <div class="form-group mb-2" [class.error]="LoginForm.controls['email'].dirty && LoginForm.hasError('required','email')">
-                        <label for="name">Email</label>
-                         <br>
                         <div class="input-field">
-                            <!-- <span class="fa-solid fa-envelope p-2"></span>  -->
                             <input class="form-control" placeholder="Email"  formControlName="email" type="text" required="required">
                         </div>
                     </div>
                     <small  *ngIf="LoginForm.controls['email'].dirty && LoginForm.hasError('required','email')"  class="text-danger">Email is required</small>
                 
                     <div class="form-group mt-3"  [class.error]="LoginForm.controls['password'].dirty && LoginForm.hasError('required','password')">
-                        <label  for="complete">Password</label> <br>
-                        <!-- <i class="fa-solid fa-lock"></i> -->
-                        <input class="form-control" formControlName="password" placeholder="password"  [type]="changepass?'password':'text'"  required>
+                        <input class="form-control" formControlName="password" placeholder="Enter password"  [type]="changepass?'password':'text'"  required>
                         <span class="eyeicon" (click)="viewpass()"><i  [ngClass]="visible?'fa-solid fa-eye':'fa-solid fa-eye-slash'"></i></span>
                     </div>
                     <small *ngIf="LoginForm.controls['password'].dirty && LoginForm.hasError('required','password')"  class="text-danger">Password is required</small>

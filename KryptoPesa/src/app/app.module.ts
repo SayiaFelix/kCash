@@ -18,6 +18,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ForgetPasswordComponent } from './forget-password/forget-password.component';
+import { Signup2Component } from './signup2/signup2.component';
+import { ContactNumberComponent } from './contact-number/contact-number.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { ForgetPasswordComponent } from './forget-password/forget-password.compo
     FooterComponent,
     KryptoPriceComponent,
     KryptoPriceDetailComponent,
-    ForgetPasswordComponent
+    ForgetPasswordComponent,
+    Signup2Component,
+    ContactNumberComponent
   ],
   imports: [
     BrowserModule,
