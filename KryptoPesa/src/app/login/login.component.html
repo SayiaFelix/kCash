@@ -11,7 +11,7 @@
                         <label for="name">Email</label>
                          <br>
                         <div class="input-field">
-                            <span class="fa-solid fa-envelope p-2"></span> 
+                            <!-- <span class="fa-solid fa-envelope p-2"></span>  -->
                             <input class="form-control" placeholder="Email"  formControlName="email" type="text" required="required">
                         </div>
                     </div>
@@ -21,14 +21,17 @@
 
                         <label  for="complete">Password</label> <br>
                         <!-- <i class="fa-solid fa-lock"></i> -->
-                        <input class="form-control" formControlName="password"  type='password'  required>
+                        <input class="form-control" formControlName="password" placeholder="password"  [type]="changepass?'password':'text'"  required>
+                        <span class="eyeicon" (click)="viewpass()"><i  [ngClass]="visible?'fa-solid fa-eye':'fa-solid fa-eye-slash'"    class=""></i></span>
+
             
                     </div>
                     <small *ngIf="LoginForm.controls['password'].dirty && LoginForm.hasError('required','password')"  class="text-danger">Password is required</small>
-                  <hr>
+                   <br>
+                    <hr>
                     <div>
-                        <input class="ml-1" type="checkbox" name="remember" id="remember">
-                        <span>Remember Me</span>
+                        <input class="" type="checkbox" name="remember" id="remember">
+                        <span class="p-1">Remember Me</span>
                         <p class="form-inline" style="float: right;"><a routerLink="/forget-password" class="fs-5">Forget Password? </a></p>
                     </div>
                    <div>

@@ -13,6 +13,15 @@ export class LoginComponent implements OnInit {
 
   public LoginForm!: FormGroup; 
 
+  visible:boolean=false;
+  changepass:boolean = true;
+
+  viewpass(){
+    this.visible = !this.visible;
+    this.changepass=!this.changepass;
+  }
+
+
   constructor(private fb:FormBuilder,
      private http:HttpClient,
       private router:Router,
