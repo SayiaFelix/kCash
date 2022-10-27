@@ -61,6 +61,42 @@
     {
       "contact": 7789877080,
       "id": 12
+    },
+    {
+      "email": "admin@deo.com",
+      "password": "demo12345",
+      "cpassword": "demo12345",
+      "id": 13
+    },
+    {
+      "firstname": "khkh",
+      "lastname": ",h,jh",
+      "id": 14
+    },
+    {
+      "contact": 878,
+      "id": 15
+    },
+    {
+      "email": "admin@demo.com",
+      "password": "demo12345",
+      "cpassword": "demo12345",
+      "id": 16
+    },
+    {
+      "email": "admin@demo.com",
+      "password": "demo12345",
+      "cpassword": "demo12345",
+      "id": 17
+    },
+    {
+      "firstname": "ruyy",
+      "lastname": "khiu",
+      "id": 18
+    },
+    {
+      "contact": 564768,
+      "id": 19
     }
   ],
   "comments": [

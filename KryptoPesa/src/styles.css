@@ -1,13 +1,49 @@
 /* You can add global styles to this file, and also import other style files */
 .eyeicon{
     position: absolute;
-    margin-top: -30px;
-    float: left;
+    margin-top: -28px;
     margin-left: 92%;
     cursor: pointer;
+    font-size: 12px;
+   
+}
+.eyeicon:hover{
+    color: #5BC43B;
+    font-size: 15px;
+}
+.auth{
+    background-color: #5BC43B;
+    color: #fff;
+    line-height: 45px;
+    display: inline-block;
+    padding: 0 25px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.auth:hover {
+    background-color: white;
+    color: #5BC43B;
+    border: #5BC43B solid 1px;
+}
+.register{
+    background-color:#000000 ;
+}
+.register .card {
+    background-color:#000000 ;
+    color: #fff;
+    margin-top: 25px;
+   
+}
+.register .card form input {
+    background-color:#000000 ;
+    color: #fff;
 }
 .button_1 {
-    background-color: #f9b707;
+    background-color: #5BC43B;
     color: #fff;
     line-height: 45px;
     display: inline-block;

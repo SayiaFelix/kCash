@@ -1,10 +1,12 @@
-
-<div class="container mt-2">
+<div class="register">
+  <div class="container mt-2">
     <div class="row">
+      <div class="col-md-3">
+      </div>
       <div class="col-md-6">
         <div class="card p-2">
           <div class="text-center">
-             <h2>What is your Email Address?</h2>
+             <h3>What is your Email Address?</h3>
              <h6>You will use this email to login next time</h6>
           </div>
 
@@ -42,17 +44,20 @@
             <small *ngIf="SignupForm.controls['cpassword'].dirty && SignupForm.hasError('MatchPass','cpassword')"  class="text-danger">Cornfirm Password did not match</small>
 
             <div class="mt-4 text-center">
-              <p> <a href="/login">Already have an account??</a></p>
+              <p> <a  routerLink="/login" class="text-light">Already have an account?</a></p>
             </div>
             <div class="mt-4 text-center">
               <p> By continuing you agree to the
-                  <a href="">KryptoPesa user <br> agreement</a> & <a href=""> Policy</a>
+                  <a class="text-light"   href="">KryptoPesa user <br> agreement</a> & <a class="text-light" href=""> Policy</a>
               </p>
             </div>
-            <button style="width: 90%; margin-left: 4%;" type="submit" (click)="Signup()" class="btn btn-lg btn-success mt-2 text-center text-light">CONTINUE</button>
+            <button type="submit" (click)="Signup()" class="auth btn mt-2 text-center w-100">CONTINUE</button>
           </form>
         </div>
       </div>
+      <div class="col-md-3">
+      </div>
     </div>
-    </div>
-    <br>
+  </div>
+</div>
+  <br>

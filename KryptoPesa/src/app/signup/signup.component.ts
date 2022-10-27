@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { NgToastService } from 'ng-angular-popup';
+import ValidateForm from '../Helper/validateForm';
 
 @Component({
   selector: 'app-signup',
@@ -79,25 +80,9 @@ export class SignupComponent implements OnInit {
       // send obj to db
   
     }else{
-      this.validateAllFormFields(this.SignupForm)
-      alert('Form is  invalid')
+      ValidateForm.validateAllFormFields(this.SignupForm)
+      alert('Your Form is Empty')
     }
   
   }
-  
-  private validateAllFormFields(formGroup:FormGroup)
-  {
-  Object.keys(formGroup.controls).forEach(field=>{
-    const control = formGroup.get(field);
-  
-    if( control instanceof FormControl){
-      control.markAsDirty( {onlySelf: true});
-    }
-    else if( control instanceof FormGroup){
-      this.validateAllFormFields(control);
-    }
-  })
-    
-  }
-
 }
