@@ -14,8 +14,6 @@ export class AboutusComponent implements OnInit {
   isSubmit =true;
   submittedMessage='';
   constructor(private fb:FormBuilder,
-     private http:HttpClient,
-      private router:Router,
       private toast: NgToastService
       ){ }
 
@@ -31,12 +29,10 @@ export class AboutusComponent implements OnInit {
   console.log(value)
   
   this.isSubmit = true;
-  this.submittedMessage ='Submitted Successfully';
-  
+  this.submittedMessage ='Thank You for your Message.';
+  this.toast.info({detail:'Messsage Submitted',summary:"Thank You",duration:3000})
   setTimeout(()=>{
     this.isSubmit = false;
-  },5000);
+  },4000);
   }
-
-
 }

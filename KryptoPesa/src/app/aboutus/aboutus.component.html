@@ -126,56 +126,56 @@
   
   <!-- team-section end -->
   
-  
-  <div class="container mt-5">
-    <div class="row">
-      <div class="contactus">
-          <div class="sec-title text-center">
-              <h2>Say Something <span style="color: #f9b707;">for</span> Us</h2>
-              <p>Here are some  that we featured for choose your best</p>
-               <span><img src="../../assets/sb.png" class="image-fluid" alt="banner" /></span> 
-          <br>
-          <br>
-          </div>
-       <form [formGroup]="contactForm">
-       
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="form-group mb-2" [class.error]="contactForm.controls['name'].dirty && contactForm.hasError('required','name')">
-                        <br>
-                        <input placeholder="Name" class="form-control" type="text" formControlName="name" required>
-                    </div>                   
-                    <small *ngIf="contactForm.controls['name'].dirty && contactForm.hasError('required','name')"  class="text-danger">Name is required</small>
-                </div>
-        
-                <div class="col-md-6">
-                    <div class="form-group mb-2"  [class.error]="contactForm.controls['email'].dirty && contactForm.hasError('required','email')">
-                     
-                        <br>
-                        <input placeholder="Email" class="form-control" formControlName="email" type="email" required="required">
+<div class="contactus" >
+    <div class="container mt-5">
+        <div class="row">
+              <div class="sec-title text-center" style="margin-top: 20px;">
+                  <h2>Say Something <span style="color: #f9b707;">for</span> Us</h2>
+                  <p>Here are some  that we featured for choose your best</p>
+                   <span><img src="../../assets/sb.png" class="image-fluid" alt="banner" /></span> 
+              <br>
+              <br>
+              </div>
+              <form [formGroup]="contactForm">
+            
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group mb-2" [class.error]="contactForm.controls['name'].dirty && contactForm.hasError('required','name')">
+                                <br>
+                                <input placeholder="Name" class="form-control" type="text" formControlName="name" required>
+                            </div>                   
+                            <small *ngIf="contactForm.controls['name'].dirty && contactForm.hasError('required','name')"  class="text-danger">Name is required</small>
+                        </div>
+                
+                        <div class="col-md-6">
+                            <div class="form-group mb-2"  [class.error]="contactForm.controls['email'].dirty && contactForm.hasError('required','email')">
+                            
+                                <br>
+                                <input placeholder="Email" class="form-control" formControlName="email" type="email" required="required">
+                            </div>
+                            <small  *ngIf="contactForm.controls['email'].dirty && contactForm.hasError('required','email')"  class="text-danger">Email is required</small>
+                        </div>
                     </div>
-                    <small  *ngIf="contactForm.controls['email'].dirty && contactForm.hasError('required','email')"  class="text-danger">Email is required</small>
-                </div>
-            </div>
-        
-          <div class="form-group mb-2" [class.error]="contactForm.controls['message'].dirty && contactForm.hasError('required','message')">
-           
-               <br>
-               <textarea placeholder="Your Message..." class="form-control" rows="5" id="comment"formControlName="message" required></textarea>
-            
-            </div> 
-          <small *ngIf="contactForm.controls['message'].dirty && contactForm.hasError('required','message')"  class="text-danger">Message is required</small>
-
-            
-        <button  type="reset" [disabled]="contactForm.invalid"  (click)="sendMessage(contactForm.value)" class="btn btn-lg btn-outline-success mt-1">Send Message</button>
-        <p *ngIf="isSubmit" style="color: green; font-size:20px; float: right;">{{submittedMessage}}</p>
-          
-      </form>
+                
+                <div class="form-group mb-2" [class.error]="contactForm.controls['message'].dirty && contactForm.hasError('required','message')">
+                
+                    <br>
+                    <textarea placeholder="Your Message..." class="form-control" rows="5" id="comment"formControlName="message" required></textarea>
+                    
+                    </div> 
+                <small *ngIf="contactForm.controls['message'].dirty && contactForm.hasError('required','message')"  class="text-danger">Message is required</small>
+    
+                    
+                <button  type="reset" [disabled]="contactForm.invalid"  (click)="sendMessage(contactForm.value)" class="btn auth  mt-1">Send Message</button>
+                <p *ngIf="isSubmit" style="color: #5BC43B; font-size:20px; float: right;">{{submittedMessage}}</p>
+                
+            </form>
+          </div>
       </div>
-    </div>
   </div>
   
-  <div class="container-fluid mt-3">
+  
+  <div class="container-fluid mt-2">
       <div class="row">
           <div class="col-12" style="border-top: 1px solid black;border-radius:5px;">
             <div class="">

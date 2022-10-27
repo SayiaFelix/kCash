@@ -22,6 +22,7 @@
     font-weight: 700;
     font-size: 20px;
     margin-bottom: 10px;
+    font-family: 'Poppins';
 }
 
 .auth:hover {
@@ -41,6 +42,8 @@
 .register .card form input {
     background-color:#000000 ;
     color: #fff;
+    font-family: 'Poppins', sans-serif;
+    
 }
 .button_1 {
     background-color: #5BC43B;
@@ -73,7 +76,7 @@
         transition: all 0.5s;
     }
     .scroll-top {
-        background-color: #f9b707;
+        background-color: #5BC43B;
         width: 50px;
         height: 50px;
         text-align: center;
@@ -86,7 +89,7 @@
     }
 
     .scroll-top:hover {
-        background-color: #1f293d;
+        background-color: #f9b707;
         color: #fff;
     }
 
