@@ -5,35 +5,28 @@
         <div class="card p-2">
           <h2 class="text-center">Sign Up</h2>
       <hr>
-      <form  [formGroup]="SignupForm" >
-        <div class="form-group mb-2" [class.error]="SignupForm.controls['firstname'].dirty && SignupForm.hasError('required','firstname')">
-          <label for="name">First Name</label>
-           <br>
-          <input  class="form-control" type="text" formControlName="firstname" required>
-        </div> 
-      <small *ngIf="SignupForm.controls['firstname'].dirty && SignupForm.hasError('required','firstname')"  class="text-danger">Firstname is required</small>
-  
-      <div class="form-group mb-2" [class.error]="SignupForm.controls['lastname'].dirty && SignupForm.hasError('required','lastname')">
-          <label for="name">Last Name</label> <br>
-          <input   class="form-control" type="text"formControlName="lastname" required>     
-      </div>
-      <small *ngIf="SignupForm.controls['lastname'].dirty && SignupForm.hasError('required','lastname')"  class="text-danger">Lastname is required</small>
-      
-      <div class="form-group mb-2"[class.error]="SignupForm.controls['email'].dirty && SignupForm.hasError('required','email')">
-              <label for="name">Email</label> <br>
-              <input class="form-control" type="email" formControlName="email"  required>      
-      </div>  
-      <small *ngIf="SignupForm.controls['email'].dirty && SignupForm.hasError('required','email')"  class="text-danger">Email is required</small>
-<!--         
-      <div class="form-group mb-2" [class.error]="SignupForm.controls['username'].dirty && SignupForm.hasError('required','username')">
-              <label for="name">Username</label> <br>
-              <input  class="form-control" formControlName="username" type="text" required="required">
-          </div>
-          <small  *ngIf="SignupForm.controls['username'].dirty && SignupForm.hasError('required','username')"  class="text-danger">Username is required</small>
-        -->
+      <form  [formGroup]="SignupForm">
+          <div class="form-group mb-2" [class.error]="SignupForm.controls['firstname'].dirty && SignupForm.hasError('required','firstname')">
+            <label for="name">First Name</label>
+            <br>
+            <input  class="form-control" type="text" formControlName="firstname" required>
+          </div> 
+        <small *ngIf="SignupForm.controls['firstname'].dirty && SignupForm.hasError('required','firstname')"  class="text-danger">Firstname is required</small>
+    
+        <div class="form-group mb-2" [class.error]="SignupForm.controls['lastname'].dirty && SignupForm.hasError('required','lastname')">
+            <label for="name">Last Name</label> <br>
+            <input   class="form-control" type="text"formControlName="lastname" required>     
+        </div>
+        <small *ngIf="SignupForm.controls['lastname'].dirty && SignupForm.hasError('required','lastname')"  class="text-danger">Lastname is required</small>
+        
+        <div class="form-group mb-2"[class.error]="SignupForm.controls['email'].dirty && SignupForm.hasError('required','email')">
+                <label for="name">Email</label> <br>
+                <input class="form-control" type="email" formControlName="email"  required>      
+        </div>  
+        <small *ngIf="SignupForm.controls['email'].dirty && SignupForm.hasError('required','email')"  class="text-danger">Email is required</small>
+
+
           <div class="form-group mt-3"  [class.error]="SignupForm.controls['password'].dirty && SignupForm.hasError('required','password')">
-              <!-- <label for="complete">Password</label> <br>
-              <input  class="form-control" formControlName="password"  type='password'  required> -->
               <label  for="complete">Password</label> <br>
               <!-- <i class="fa-solid fa-lock"></i> -->
               <input class="form-control" formControlName="password" placeholder="password"  [type]="changepass?'password':'text'"  required>
@@ -44,9 +37,6 @@
 
           <div class="form-group mt-3"  [class.error]="SignupForm.controls['cpassword'].dirty && SignupForm.hasError('required','cpassword')">
             <label for="complete">Confirm Password</label> <br>
-            <!-- <input  class="form-control" formControlName="cpassword"  type='password'  required>
-            <label  for="complete">Password</label> <br> -->
-            <!-- <i class="fa-solid fa-lock"></i> -->
             <input class="form-control" formControlName="cpassword" placeholder="Cornfirm password"  [type]="changepass?'password':'text'"  required>
             <span class="eyeicon" (click)="viewpass()"><i  [ngClass]="visible?'fa-solid fa-eye':'fa-solid fa-eye-slash'"></i></span>
         </div>
