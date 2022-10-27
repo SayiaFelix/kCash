@@ -44,7 +44,7 @@
                          <input class="form-control form_input" formControlName="email" placeholder="Email Address..." type="email" required="required">
                         </div> 
                       <small  *ngIf="subscribeForm.controls['email'].dirty && subscribeForm.hasError('required','email')"  class="text-danger">Email is required</small>
-                      <button  type="reset"  class="submit" [disabled]="subscribeForm.invalid"  (click)="subscribeMessage(subscribeForm.value)" class="btn btn-sm btn-outline-success mt-1">SUBSCRIBE</button>
+                      <button  type="reset" [disabled]="subscribeForm.invalid"  (click)="subscribeMessage(subscribeForm.value)" class="button_1 btn mt-1">SUBSCRIBE</button>
                     </form>
                 </div>
                 <!-- Subscribe Form -->
