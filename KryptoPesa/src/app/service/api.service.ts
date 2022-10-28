@@ -7,20 +7,18 @@ import { Injectable } from '@angular/core';
 export class ApiService {
 
   constructor(private http:HttpClient) { }
-  
-  postProduct(data : any){
-    return this.http.post<any>("http://localhost:3000/productList/",data);
 
+getCurrency(){
+    return this.http.get<any>(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&sparkline=false`);
   }
-  getProduct(){
-    return this.http.get<any>("http://localhost:3000/productList/");
+getCurrencyTrending(){
+    return this.http.get<any>(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=gecko_desc&per_page=10&page=1&sparkline=false&price_change_percentage=24h`)
+  }
+getCurrencyDataGraphically(coinId:string, currency:string, days: number){
+    return this.http.get<any>(`https://api.coingecko.com/api/v3/coins/${coinId}/market_chart?vs_currency=${currency}&days=${days}`)
+  }
+getCurrencyById(coinId:string){
+    return this.http.get<any>(`https://api.coingecko.com/api/v3/coins/${coinId}`)
   }
 
-  putProduct(data:any,id:number){
-    return this.http.put<any>("http://localhost:3000/productList/"+id,data);
-
-  }
-  deleteProduct(id:number){
-    return this.http.delete<any>("http://localhost:3000/productList/"+id);
-}
 }

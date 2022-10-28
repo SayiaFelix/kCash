@@ -43,7 +43,7 @@
         </div>
       </div>
   </div>
-  <nav class="navbar navbar-expand-lg navbar-light sticky-top shadow p-3  bg-body rounded" >
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top shadow p-3 bg-body rounded" >
       <div class="container-fluid">
         <a class="navbar-brand fs-2 " href="#">
           <img src="../../assets/preloader.gif" alt="" width="50" height="50" class="d-inline-block align-text-top img-fluide" style="margin-top: -2%;">
@@ -55,9 +55,9 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav mx-auto mb-2 mb-lg-0" style="font-size: 20px;">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0" style="font-size: 18px; font-weight: 500;">
             <li class="nav-item">
-              <a class="nav-link active" routerLink="/homepage" routerLinkActive="active"  href="#">
+              <a class="nav-link" routerLink="/homepage" routerLinkActive="active"  href="#">
                 Home
               </a>
             </li>
@@ -79,7 +79,7 @@
           </ul>
           <div class="d-flex nav-item">
               <button class="btn button_1"> 
-                <a class="nav-link" routerLink="/signup" routerLinkActive="active"href="#">
+                <a class="nav-link" routerLink="/signup" routerLinkActive="active">
                   Register Now
                 </a>
               </button>
@@ -87,6 +87,30 @@
         </div>
       </div> 
     </nav>
-  
+      <!--<hr>
+   <div class="coin">
+       <div class="container">
+        <marquee behavior="scroll" loop="infinite"  direction="left" onmouseenter="stop()" onmouseout="start()">
+            <div class="row">
+              <ng-container *ngFor="let row of coinData">
+                <div class="card">
+                  <img [src]="row.image" style="width: 50px; margin:0 auto" class="img-fluid" alt="">
+                </div>
+                <div class="card-body">
+                  <h5 style="font-weight: 500;" class="card-title">
+                    {{row.symbol | uppercase}}
+                    <span class="text-danger">{{row.market_cap_change_percentage_24h}}%</span>
+                  </h5>
+                  <p style="font-weight: 700;" class="card-text">{{row.current_price | currency}}</p>
+                </div>
+
+              </ng-container>
+      
+            </div>
+        </marquee>
+    </div>
+    
+    </div> -->
+   
   
     

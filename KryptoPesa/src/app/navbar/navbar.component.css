@@ -1,25 +1,48 @@
+.collapse li {
+    padding: 5px;
+    transition: all 0.2s ease-in-out;
+ }
+ .coin{
+    display: flex;
+    /* height: 50%; */
+    align-items: center;
 
-    .header {
+ }
+ /* .card{
+    border: 0;
+    background: transparent;
+    color: white;
+    padding: 10px;
+    width: 100px;
+    margin: 40px;
+    height: 200px;
+ } */
+.collapse li :hover {
+    box-shadow: 0px 16px 16px 0px rgba(0, 0, 0, 0.15);
+    transition: all 0.2s ease-in-out;
+    color: green;
+ }
+.header {
         background-color: black;
         padding: 10px 0;
     }
 
-    .content ul li {
+.content ul li {
         margin-right: 20px;
         display: inline-block;
     }
 
-    .content ul li a {
+.content ul li a {
         display: inline-block;
         color: rgb(244, 245, 244);
     }
 
-    .content ul li i {
+.content ul li i {
         color: #5BC43B;
         margin-right: 10px;
         font-size: 17px;
     }
 
-    .content .right_info {
+.content .right_info {
         text-align: right;
     }

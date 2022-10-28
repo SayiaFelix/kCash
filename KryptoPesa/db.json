@@ -103,6 +103,21 @@
       "password": "demo12345",
       "cpassword": "demo12345",
       "id": 20
+    },
+    {
+      "email": "admin@demo.com",
+      "password": "demo12345",
+      "cpassword": "demo12345",
+      "id": 21
+    },
+    {
+      "firstname": "FE",
+      "lastname": "45",
+      "id": 22
+    },
+    {
+      "contact": 2334,
+      "id": 23
     }
   ],
   "comments": [

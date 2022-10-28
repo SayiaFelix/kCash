@@ -31,10 +31,32 @@
 }
 
 /* Promo section */
+
+.krypto {
+   background-image: url(../../assets/slider-4.jpg);
+   background-repeat: no-repeat;
+   padding-bottom: 10px;
+   padding-top:15px;
+   background-position: center center;
+   -webkit-background-size: cover;
+   background-size: cover;
+   color: #fff;
+}
 .promo_padding {
    padding-bottom: 150px;
 }
-
+table {
+   width: 100%;
+ }
+ 
+ .mat-form-field {
+   font-size: 14px;
+   width: 100%;
+ }
+ 
+ td, th {
+   width: 25%;
+ }
 .promo_content {
    background-color: #fafafa;
    border: 2px dashed #ddd;

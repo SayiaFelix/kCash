@@ -20,10 +20,10 @@
             <div class=" ml-2  col-lg-3 col-sm-6">
                 <h3>Company</h3>
                 <ul class="widget_links">
-                    <li><a routerLink="/about-us" href="#">About Us</a></li>
-                    <li><a routerLink="/about-us" href="#">Our Services</a></li>
-                    <li><a routerLink="/homepage" href="#">Download App</a></li>
-                    <li><a routerLink="about-us"  href="#">Contact Us</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Our Services</a></li>
+                    <li><a href="#">Download App</a></li>
+                    <li><a href="#">Contact Us</a></li>
                 </ul>
             </div>
             <div class="col-lg-3 col-sm-6">
@@ -31,7 +31,7 @@
                 <ul class="widget_links">
                     <li><a href="#">Help &amp; Support Center</a></li>
                     <li><a href="#">Returens &amp; Refunds</a></li>
-                    <li><a href="#">Mobile Screenshorts</a></li>
+                    <li><a href="#">Mobile Screenshots</a></li>
                     <li><a href="#">Terms &amp; Conditions</a></li>
                 </ul>
             </div>
@@ -44,7 +44,7 @@
                          <input class="form-control form_input" formControlName="email" placeholder="Email Address..." type="email" required="required">
                         </div> 
                       <small  *ngIf="subscribeForm.controls['email'].dirty && subscribeForm.hasError('required','email')"  class="text-danger">Email is required</small>
-                      <button  type="reset" [disabled]="subscribeForm.invalid"  (click)="subscribeMessage(subscribeForm.value)" class="button_1 btn mt-1">SUBSCRIBE</button>
+                      <button  type="reset" [disabled]="subscribeForm.invalid"  (click)="subscribeMessage(subscribeForm.value)" class="button_1 text-light btn mt-1">SUBSCRIBE</button>
                     </form>
                 </div>
                 <!-- Subscribe Form -->

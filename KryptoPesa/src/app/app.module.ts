@@ -21,6 +21,12 @@ import { ForgetPasswordComponent } from './forget-password/forget-password.compo
 import { Signup2Component } from './signup2/signup2.component';
 import { ContactNumberComponent } from './contact-number/contact-number.component';
 
+import {MatTableModule} from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatSortModule} from '@angular/material/sort';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,7 +51,12 @@ import { ContactNumberComponent } from './contact-number/contact-number.componen
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatFormFieldModule,
+    MatInputModule
 
   ],
   providers: [],
