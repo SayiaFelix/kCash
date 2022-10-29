@@ -1,3 +1,13 @@
+.coindetail {
+   background-image: url(../../assets/testimonial-background.jpg);
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-position: center center;
+   -webkit-background-size: cover;
+   background-size: cover;
+   color: #fff;
+   margin-top: -14px;
+}
 .details {
     width: 30%;
     display: flex;
@@ -5,9 +15,8 @@
     flex-direction: column;
 }
 .details h2 {
-        text-align: center;
         color: #f9b707;
-        font-size: 20px;
+        font-size: 23px;
     }
 
 .details h3 {
@@ -17,9 +26,9 @@
 .details .img {
     background: transparent;
     margin: auto;
-    display: flex;
-    flex-direction: column;
-    border-radius: 10px;
+    /* display: flex;
+    flex-direction: column; */
+ 
 
 }
 
