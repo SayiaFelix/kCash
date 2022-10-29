@@ -126,6 +126,7 @@ table {
    font-size: 16px;
    font-style: italic;
 }
+/* Table Price */
 :host ::ng-deep .mat-sort-header-content {
    color: #fff;
    font-size: 18px;
@@ -141,4 +142,9 @@ table {
 
 :host ::ng-deep tr.mat-row {
    height: 60px;
+}
+:host ::ng-deep tr.mat-row :hover {
+    transition: all 0.2s ease-in-out;
+    color: #000;
+    font-size: 15px ;
 }

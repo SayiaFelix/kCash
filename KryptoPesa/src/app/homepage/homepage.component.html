@@ -52,7 +52,7 @@
 <div class="krypto mt-3">
     <div class="container">
         <div class="text-center">
-            <h1 class="fw-bold"> CryptoCurrency <span style="color:#f9b707;"> Prices </span></h1>
+            <h1 class="fw-bold"> CryptoCurrency <span style="color:#f9b707;"> Prices </span> </h1>
             <p>Here are some  that we featured for choose your best</p>
             <img src="../../assets/sb.png"  class="image-fluid"  alt="img">
         </div>
@@ -69,7 +69,7 @@
           
               <!-- Symbol Column -->
               <ng-container matColumnDef="symbol">
-                <th mat-header-cell *matHeaderCellDef mat-sort-header> Coin</th>
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> CRYPTOCURRENCY </th>
                 <td mat-cell *matCellDef="let row">
                     <img [src]="row.image" width="50" alt="">
                     <span class="mx-2">{{row.symbol | uppercase}}</span>
@@ -78,19 +78,19 @@
           
               <!-- Price Column -->
               <ng-container matColumnDef="current_price">
-                <th mat-header-cell *matHeaderCellDef mat-sort-header> Price </th>
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> PRICE </th>
                 <td mat-cell *matCellDef="let row"> {{row.current_price | currency}} </td>
               </ng-container>
           
               <!-- Change Column -->
               <ng-container matColumnDef="price_change_percentage_24h">
-                <th mat-header-cell *matHeaderCellDef mat-sort-header> 24h Change </th>
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> 24h % CHANGE </th>
                 <td mat-cell *matCellDef="let row"> {{row.price_change_percentage_24h}}% </td>
               </ng-container>
           
               <!-- Market cap Column -->
               <ng-container matColumnDef="market_cap">
-                <th mat-header-cell *matHeaderCellDef mat-sort-header> Market Cap </th>
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> 24H VOLUME </th>
                 <td mat-cell *matCellDef="let row"> {{row.market_cap | currency}} </td>
               </ng-container>
           

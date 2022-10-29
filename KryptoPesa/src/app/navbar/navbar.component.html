@@ -95,13 +95,12 @@
                     <div class="col-1">
                         <div class="card">
                             <img [src]="row.image" class="img-fluid" alt="">
-                            <div class="row">
-                              
-                                <h5 class="card-title">{{row.symbol | uppercase}}
-                                   <span class="text-danger">{{row.market_cap_change_percentage_24h}}%</span>
-                                  </h5>
-                                <span class="h6">{{row.current_price | currency}}</span>
-                            </div>
+                                <h5 class="text-center">
+                                  <span style="color:#000;">{{row.name}}</span>
+                                   <span style="color:#f9b707;padding: 2px;">({{row.symbol | uppercase}})</span> <br>
+                                   <span class="fw-bold">{{row.current_price | currency}}</span> 
+                                   <!-- <span class="text-danger">{{row.market_cap_change_percentage_24h}}%</span> -->
+                                </h5>
                         </div>
                     </div>
                 </ng-container>
