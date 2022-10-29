@@ -14,7 +14,7 @@ export class KryptoPriceComponent implements OnInit {
 
   coinData: any;
   coinId! :string;
-  days : number=30;
+  days : number=1;
   
   public lineChartData: ChartConfiguration['data'] = {
     datasets: [
@@ -22,11 +22,11 @@ export class KryptoPriceComponent implements OnInit {
         data: [],
         label: `Price Trends`,
         backgroundColor: 'rgba(148,159,177,0.2)',
-        borderColor: '#009688',
-        pointBackgroundColor: '#009688',
-        pointBorderColor: '#009688',
-        pointHoverBackgroundColor: '#009688',
-        pointHoverBorderColor: '#009688',
+        borderColor: '#5BC43B',
+        pointBackgroundColor: '#5BC43B',
+        pointBorderColor: '#5BC43B',
+        pointHoverBackgroundColor: '#5BC43B',
+        pointHoverBorderColor: '#5BC43B',
 
       }
     ],
@@ -74,7 +74,7 @@ export class KryptoPriceComponent implements OnInit {
     .subscribe(res=>{
       setTimeout(()=>{
         this.myLineChart.chart?.update();
-      },200)
+      },100)
 
       console.log(res)
       this.lineChartData.datasets[0].data =res.prices.map((a:any)=>{

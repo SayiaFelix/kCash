@@ -1,49 +1,44 @@
 .details {
     width: 30%;
     display: flex;
-    margin-top: 25px;
     align-items: center;
-    border-right: 2px solid grey;
     flex-direction: column;
- 
 }
-.detail h3 {
-        font-weight: bold;
-        margin-bottom: 20px;
+.details h2 {
+        text-align: center;
+        color: #f9b707;
+        font-size: 20px;
     }
 
-.detail h6 {
+.details h3 {
         width: 100%;
-        padding: 25px;
-        text-align: justify;
-        padding-top: 0;
-        padding-bottom: 15px;
+        padding: 25px; 
     }
-.img {
+.details .img {
     background: transparent;
     margin: auto;
     display: flex;
     flex-direction: column;
+    border-radius: 10px;
 
 }
 
 .more-detail {
-    padding: 10px;
-    margin: 10px;
-    line-height: 50px;
-   
+    text-align: center;
+    margin: 1px; 
 }
 .more-detail .title {
-        font-size: 30px;
+        font-size: 16px;
         font-weight: 600;
     }
 .more-detail   .value {
-        font-size: 30px;
+        font-size: 14px;
         font-weight: 500;
+        margin-bottom: 10px;
     }
 
-.btn-custom {
-    color: #fff;
+.button_2 {
+    color: #f9b707 ;
     background: transparent;
     font-weight: 400;
     font-size: 18px;
@@ -51,7 +46,7 @@
     width: 23%;
 }
 
-.btn-custom:focus {
+.button_2:hover {
     background: #009688;
     font-weight: 700;
     font-size: 18px;
