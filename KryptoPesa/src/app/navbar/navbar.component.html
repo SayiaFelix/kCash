@@ -87,30 +87,24 @@
         </div>
       </div> 
     </nav>
-      <!--<hr>
-   <div class="coin">
-       <div class="container">
-        <marquee behavior="scroll" loop="infinite"  direction="left" onmouseenter="stop()" onmouseout="start()">
+   
+    <div class="coinBar">
+      <marquee behavior="scroll" onmouseover="stop()" onmouseout="start()" loop="infinite" direction="left">
             <div class="row">
-              <ng-container *ngFor="let row of coinData">
-                <div class="card">
-                  <img [src]="row.image" style="width: 50px; margin:0 auto" class="img-fluid" alt="">
-                </div>
-                <div class="card-body">
-                  <h5 style="font-weight: 500;" class="card-title">
-                    {{row.symbol | uppercase}}
-                    <span class="text-danger">{{row.market_cap_change_percentage_24h}}%</span>
-                  </h5>
-                  <p style="font-weight: 700;" class="card-text">{{row.current_price | currency}}</p>
-                </div>
-
-              </ng-container>
-      
+                <ng-container *ngFor="let row of coinData">
+                    <div class="col-1">
+                        <div class="card">
+                            <img [src]="row.image" class="img-fluid" alt="">
+                            <div class="ca-body">
+                                <h5 class="card-title">{{row.symbol | uppercase}} <span class="text-danger">{{row.market_cap_change_percentage_24h}}%</span></h5>
+                                <p class="card-text">{{row.current_price | currency}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </ng-container>
             </div>
         </marquee>
     </div>
-    
-    </div> -->
    
   
     

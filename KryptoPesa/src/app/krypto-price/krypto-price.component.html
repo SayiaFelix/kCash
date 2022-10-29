@@ -1,4 +1,4 @@
-<div class="container" style="margin-top: 30px;">
+<div class="container">
     <div class="row">
         <div class="text-center">
             <h1 class="fw-bold"> CryptoCurrency <span style="color:#f9b707;"> Price Details </span></h1>
@@ -7,7 +7,7 @@
         </div>
         <div class="col-md-3 details card">
             <div class="img">
-                <h2 class="text-center mt-3" style="font-size: 20px;">{{coinData?.name}}</h2>
+                <h2 class="text-center mt-3">{{coinData?.name}}</h2>
                 <img [src]="coinData?.image?.large" width=""   class="img-fluid"alt="">
                 <hr>
                 <h3 [innerHtml]="coinData?.description?.en.split('. ')[0]" ></h3>
