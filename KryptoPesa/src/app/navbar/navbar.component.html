@@ -95,9 +95,12 @@
                     <div class="col-1">
                         <div class="card">
                             <img [src]="row.image" class="img-fluid" alt="">
-                            <div class="ca-body">
-                                <h5 class="card-title">{{row.symbol | uppercase}} <span class="text-danger">{{row.market_cap_change_percentage_24h}}%</span></h5>
-                                <p class="card-text">{{row.current_price | currency}}</p>
+                            <div class="row">
+                              
+                                <h5 class="card-title">{{row.symbol | uppercase}}
+                                   <span class="text-danger">{{row.market_cap_change_percentage_24h}}%</span>
+                                  </h5>
+                                <span class="h6">{{row.current_price | currency}}</span>
                             </div>
                         </div>
                     </div>

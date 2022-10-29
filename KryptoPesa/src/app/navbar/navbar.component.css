@@ -8,30 +8,30 @@
     color: #5BC43B;
  }
  .coinBar{
-    height: 105px;
+    height: 79px;
     display: flex;
-    /* flex-direction: row; */
+    flex-direction: row;
     align-items: center;
-    border-bottom: 1px solid #5BC43B;
-    margin-bottom: 1px;
+    border-bottom: 1px solid #fff;
+    padding-top: 5px;
  }
 .card {
     border: 0;
     background: transparent;
-    color: rgb(2, 0, 0);
+    color: rgb(0, 0, 0);
     width: 70px;
-    height: 100px;
-
+    height: 80px;
 }  
 .card img {
-    width: 45px;
+    width: 38px;
     margin: 0 auto;
 }
 .card h5 {
     font-weight: 500;
     }
-.card p {
-     font-weight: 700;
+.card .h6 {
+     font-weight: 600;
+     line-height: 1px;
     }
 
 .header {
