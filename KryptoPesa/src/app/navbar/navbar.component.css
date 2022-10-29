@@ -8,7 +8,7 @@
     color: #5BC43B;
  }
  .coinBar{
-    height: 79px;
+    height: 70px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -18,11 +18,10 @@
     border: 0;
     background: transparent;
     color: rgb(0, 0, 0);
-    width: 70px;
-    height: 80px;
+    height: 70px;
 }  
 .card img {
-    width: 38px;
+    width: 30px;
     margin: 0 auto;
 }
 .card h5 {
