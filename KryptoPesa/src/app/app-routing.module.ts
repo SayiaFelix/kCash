@@ -24,7 +24,7 @@ const routes: Routes = [
   {path:'homepage',component:HomepageComponent},
   {path:'dashboard',component:DashboardComponent},
   {path:'about-us',component:AboutusComponent},
-  {path:'Krypto-Price',component:KryptoPriceComponent},
+  {path:'coinDetail/:id',component:KryptoPriceComponent},
 
   {path:'**',component:NotfoundComponent}
 

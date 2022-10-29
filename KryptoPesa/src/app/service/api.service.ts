@@ -14,8 +14,8 @@ getCurrency(){
 getCurrencyTrending(){
     return this.http.get<any>(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=gecko_desc&per_page=10&page=1&sparkline=false&price_change_percentage=24h`)
   }
-getCurrencyDataGraphically(coinId:string, currency:string, days: number){
-    return this.http.get<any>(`https://api.coingecko.com/api/v3/coins/${coinId}/market_chart?vs_currency=${currency}&days=${days}`)
+getCurrencyDataGraphically(coinId:string,days: number){
+    return this.http.get<any>(`https://api.coingecko.com/api/v3/coins/${coinId}/market_chart?vs_currency=usd&days=${days}`)
   }
 getCurrencyById(coinId:string){
     return this.http.get<any>(`https://api.coingecko.com/api/v3/coins/${coinId}`)

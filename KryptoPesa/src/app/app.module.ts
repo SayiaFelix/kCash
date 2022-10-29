@@ -12,7 +12,6 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { FooterComponent } from './footer/footer.component';
 import { KryptoPriceComponent } from './krypto-price/krypto-price.component';
-import { KryptoPriceDetailComponent } from './krypto-price-detail/krypto-price-detail.component';
 import { NgToastModule } from 'ng-angular-popup';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -27,6 +26,9 @@ import {MatSortModule} from '@angular/material/sort';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 
+import { NgChartsModule } from 'ng2-charts';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +41,6 @@ import {MatInputModule} from '@angular/material/input';
     NotfoundComponent,
     FooterComponent,
     KryptoPriceComponent,
-    KryptoPriceDetailComponent,
     ForgetPasswordComponent,
     Signup2Component,
     ContactNumberComponent
@@ -52,11 +53,14 @@ import {MatInputModule} from '@angular/material/input';
     ReactiveFormsModule,
     FormsModule,
     BrowserAnimationsModule,
+
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+
+    NgChartsModule
 
   ],
   providers: [],

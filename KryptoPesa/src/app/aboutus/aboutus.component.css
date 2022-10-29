@@ -144,10 +144,17 @@ border-radius: 20px;
 .contactus{
     color: #fff;
     padding-bottom: 10px;
-    background-image: url(../../assets/testimonial-background.jpg);
+    background-image: url(../../assets/callback-background.jpg);
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-position: center center;
     -webkit-background-size: cover;
     background-size: cover;
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+.contactus form{
+    background-color: transparent;
 }
