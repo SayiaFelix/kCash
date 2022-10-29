@@ -9,8 +9,8 @@
             <div class="col-md-3 details">
                 <div class="img ">
                     <h2 class="mt-3">{{coinData?.name}}</h2>
-                    <img [src]="coinData?.image?.large" width="200"  class="img-fluid"alt="">
                     <hr>
+                    <img [src]="coinData?.image?.large" width="200"  class="img-fluid"alt="">
                     <h3 [innerHtml]="coinData?.description?.en.split('. ')[0]" ></h3>
                     <div class="more-detail">
                         <span class="title">Rank: </span ><span class="value">{{coinData?.market_cap_rank}}</span> <br>
