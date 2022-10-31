@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { NgToastService } from 'ng-angular-popup';
@@ -13,6 +13,7 @@ import ValidateForm from '../Helper/validateForm';
 export class ContactNumberComponent implements OnInit {
 
   public MobileForm!: FormGroup; 
+
   constructor
   (
     private fb:FormBuilder,
@@ -20,6 +21,7 @@ export class ContactNumberComponent implements OnInit {
     private router:Router,
     private toast:NgToastService
     ) { }
+    
 
   ngOnInit(): void {
     this.MobileForm= this.fb.group({
@@ -35,7 +37,7 @@ export class ContactNumberComponent implements OnInit {
       .subscribe(res=>{
         this.toast.success({detail:'Success Message',summary:"Verification going on!!!",duration:5000})
         this.MobileForm.reset();
-       this.router.navigate(['login']);
+       this.router.navigate(['otp']);
        },err=>{
         this.toast.error({detail:'Failed Message',summary:"Verification Failed, Something Went wrong!!",duration:5000})
      })
@@ -45,7 +47,6 @@ export class ContactNumberComponent implements OnInit {
       ValidateForm.validateAllFormFields(this.MobileForm)
       alert('Your Form is Empty')
     }
-  
+ 
   }
-
 }

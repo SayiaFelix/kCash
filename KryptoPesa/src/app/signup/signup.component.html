@@ -11,7 +11,7 @@
           </div>
 
           <form  [formGroup]="SignupForm" class="mt-5">
-            <!-- <div class="form-group mb-2" [class.error]="SignupForm.controls['firstname'].dirty && SignupForm.hasError('required','firstname')">
+            <div class="form-group mb-2" [class.error]="SignupForm.controls['firstname'].dirty && SignupForm.hasError('required','firstname')">
                 <label for="name">First Name</label>
                 <br>
                 <input  class="form-control" type="text" formControlName="firstname" required>
@@ -23,7 +23,7 @@
                 <input   class="form-control" type="text"formControlName="lastname" required>     
             </div>
             <small *ngIf="SignupForm.controls['lastname'].dirty && SignupForm.hasError('required','lastname')"  class="text-danger">Lastname is required</small>
-            -->
+           
             <div class="form-group mb-2"[class.error]="SignupForm.controls['email'].dirty && SignupForm.hasError('required','email')">
               <input class="form-control" placeholder="Email adrress" type="email" formControlName="email"  required>      
             </div>  
@@ -51,7 +51,7 @@
                   <a class="text-light"   href="">KryptoPesa user <br> agreement</a> & <a class="text-light" href=""> Policy</a>
               </p>
             </div>
-            <button type="submit" (click)="Signup()" class="auth btn mt-2 text-center w-100">CONTINUE</button>
+            <button type="submit" (click)="Signup()" class="auth btn mt-2 text-center w-100">Sign In</button>
           </form>
         </div>
       </div>

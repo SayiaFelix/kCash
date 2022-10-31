@@ -1,4 +1,10 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { NgToastService } from 'ng-angular-popup';
+import ValidateForm from '../Helper/validateForm';
+import { AuthService } from '../service/auth.service';
 
 @Component({
   selector: 'app-forget-password',
@@ -6,10 +12,45 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./forget-password.component.css']
 })
 export class ForgetPasswordComponent implements OnInit {
-
-  constructor() { }
+  public forgetPassForm!: FormGroup; 
+  
+  constructor
+  (
+    private fb:FormBuilder,
+    private http:HttpClient,
+    private router:Router,
+    private toast:NgToastService,
+    private auth: AuthService
+    ) { }
 
   ngOnInit(): void {
+    this.forgetPassForm= this.fb.group({
+      email: ['', [Validators.required,Validators.email]],
+      // password: ['', [Validators.required,Validators.minLength(8)]],
+      // cpassword: ['', Validators.required]
+  })
   }
 
+  forgetPass(){
+    if(this.forgetPassForm.valid){
+      console.log(this.forgetPassForm.value);
+      this.http.post<any>("http://localhost:3000/users/",this.forgetPassForm.value)
+      .subscribe(res=>{
+        this.toast.success({detail:'Success Message',summary:"Email Added Successfully!!",duration:5000})
+        // alert('Signup successfully');
+        this.forgetPassForm.reset();
+       this.router.navigate(['sign']);
+       },err=>{
+        this.toast.error({detail:'Failed Message',summary:"Email Failed, Something Went wrong!!",duration:5000})
+        // alert('something went wrong')
+  
+     })
+      // send obj to db
+  
+    }else{
+      ValidateForm.validateAllFormFields(this.forgetPassForm)
+      alert('Your Form is Empty')
+    }
+  
+  }
 }

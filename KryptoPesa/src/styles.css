@@ -34,6 +34,16 @@
 .register{
     background-color:#000000 ;
 }
+.register h2{
+    color:#fff;
+    font-size: 25px ;
+
+}
+.register h6{
+    color:#fff;
+    font-size: 15px ;
+
+}
 .register .card {
     background-color:#000000 ;
     color: #fff;
@@ -135,5 +145,9 @@
     font-weight: 700;
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body { 
+    height: 100%;
+ }
+body { margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}

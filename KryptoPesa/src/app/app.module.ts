@@ -27,7 +27,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 
 import { NgChartsModule } from 'ng2-charts';
-
+import { OtpComponent } from './otp/otp.component';
+import { NgOtpInputModule } from 'ng-otp-input';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { NgChartsModule } from 'ng2-charts';
     KryptoPriceComponent,
     ForgetPasswordComponent,
     Signup2Component,
-    ContactNumberComponent
+    ContactNumberComponent,
+    OtpComponent
   ],
   imports: [
     BrowserModule,
@@ -60,7 +62,9 @@ import { NgChartsModule } from 'ng2-charts';
     MatFormFieldModule,
     MatInputModule,
 
-    NgChartsModule
+    NgChartsModule,
+    NgOtpInputModule
+    
 
   ],
   providers: [],
