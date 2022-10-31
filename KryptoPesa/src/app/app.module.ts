@@ -17,8 +17,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ForgetPasswordComponent } from './forget-password/forget-password.component';
-import { Signup2Component } from './signup2/signup2.component';
-import { ContactNumberComponent } from './contact-number/contact-number.component';
+
 
 import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
@@ -43,8 +42,6 @@ import { NgOtpInputModule } from 'ng-otp-input';
     FooterComponent,
     KryptoPriceComponent,
     ForgetPasswordComponent,
-    Signup2Component,
-    ContactNumberComponent,
     OtpComponent
   ],
   imports: [

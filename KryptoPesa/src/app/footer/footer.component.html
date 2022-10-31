@@ -43,11 +43,11 @@
                         <div class="form-group mb-2"  [class.error]="subscribeForm.controls['email'].dirty && subscribeForm.hasError('required','email')">
                          <input class="form-control form_input" formControlName="email" placeholder="Email Address..." type="email" required="required">
                         </div> 
-                      <small  *ngIf="subscribeForm.controls['email'].dirty && subscribeForm.hasError('required','email')"  class="text-danger">Email is required</small>
+                      <small  *ngIf="subscribeForm.controls['email'].dirty && subscribeForm.hasError('required','email')"  class="text-danger">Email is required</small> 
+                      <small *ngIf="subscribeForm.controls['email'].dirty && subscribeForm.hasError('email','email')"  class="text-danger">Input Email Format</small>
                       <button  type="reset" [disabled]="subscribeForm.invalid"  (click)="subscribeMessage(subscribeForm.value)" class="button_1 text-light btn mt-1">SUBSCRIBE</button>
                     </form>
                 </div>
-                <!-- Subscribe Form -->
             </div>
         </div>
     </div>
@@ -55,14 +55,12 @@
       <i class="fa-solid fa-arrow-up"></i>
   </a>
   </section>
-  <!-- ./Widget Section -->
-  
   <footer class="footer">
     <div class="container">
         <div class="copyright">&copy;2022 <span style="color:#f9b707;">KryptoPesa</span> All Right Reserved  </div>
     </div>
-  </footer>
-  <!-- /.footer_section -->
+  </footer> 
+
   
   
   

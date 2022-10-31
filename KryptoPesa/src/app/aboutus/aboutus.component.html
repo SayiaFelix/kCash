@@ -148,13 +148,14 @@
                                         <input placeholder="Email" class="form-control" formControlName="email" type="email" required="required">
                                     </div>
                                     <small  *ngIf="contactForm.controls['email'].dirty && contactForm.hasError('required','email')"  class="text-danger">Email is required</small>
+                                    <small *ngIf="contactForm.controls['email'].dirty && contactForm.hasError('email','email')"  class="text-danger">Input Email Format</small>
                                 </div>
                             </div>
                         <div class="form-group mb-2" [class.error]="contactForm.controls['message'].dirty && contactForm.hasError('required','message')">
                             <textarea placeholder="Your Message..." class="form-control" rows="5" id="comment"formControlName="message" required></textarea> 
                         </div> 
                         <small *ngIf="contactForm.controls['message'].dirty && contactForm.hasError('required','message')"  class="text-danger">Message is required</small>
-                        <button  type="reset" [disabled]="contactForm.invalid"  (click)="sendMessage(contactForm.value)" class="btn auth  mt-1">Send Message</button>
+                        <button  type="reset" [disabled]="contactForm.invalid"  (click)="sendMessage(contactForm.value)" class="btn button_1 mt-1">Send Message</button>
                         <p *ngIf="isSubmit" style="color: #5BC43B; font-size:20px; float: right;">{{submittedMessage}}</p>   
                     </form>
              </div>

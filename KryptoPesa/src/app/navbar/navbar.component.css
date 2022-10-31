@@ -30,7 +30,7 @@
 
 .header {
         background-color: black;
-        padding: 10px 0;
+        padding-top: 20px;
     }
 
 .content ul li {
@@ -48,7 +48,12 @@
         margin-right: 10px;
         font-size: 17px;
     }
+.content .left_info {
+        margin-left: -20% ;
+    }
+
 
 .content .right_info {
-        text-align: right;
+    margin-left: -20% ;
+    text-align: right;
     }
