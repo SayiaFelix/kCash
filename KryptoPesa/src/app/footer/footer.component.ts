@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { NgToastService } from 'ng-angular-popup';
+import { NavService } from '../service/nav.service';
 
 @Component({
   selector: 'app-footer',
@@ -16,7 +17,8 @@ export class FooterComponent implements OnInit {
   constructor(private fb:FormBuilder,
      private http:HttpClient,
       private router:Router,
-      private toast: NgToastService
+      private toast: NgToastService,
+      public foot:NavService
       ) { }
 
   ngOnInit(): void {

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../service/api.service';
+import { NavService } from '../service/nav.service';
 
 @Component({
   selector: 'app-navbar',
@@ -8,7 +9,9 @@ import { ApiService } from '../service/api.service';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor(private apiCoin:ApiService) { }
+  constructor(private apiCoin:ApiService,
+    public nav:NavService
+    ) { }
 
   coinData:any=[];
 
