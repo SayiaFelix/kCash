@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { NgToastService } from 'ng-angular-popup';
+import { ApiService } from '../service/api.service';
 
 @Component({
   selector: 'app-aboutus',
@@ -10,11 +11,15 @@ import { NgToastService } from 'ng-angular-popup';
   styleUrls: ['./aboutus.component.css']
 })
 export class AboutusComponent implements OnInit {
+ 
+  coinData:any=[];
   public contactForm!: FormGroup; 
   isSubmit =true;
   submittedMessage='';
-  constructor(private fb:FormBuilder,
-      private toast: NgToastService
+  constructor(
+    private fb:FormBuilder,
+      private toast: NgToastService,
+      private apiCoin:ApiService
       ){ }
 
   ngOnInit(): void {
@@ -22,7 +27,8 @@ export class AboutusComponent implements OnInit {
       name: ['', Validators.required],
       email: ['', [Validators.required,Validators.email]],
       message: ['', Validators.required]
-    });
+    }); 
+     this.getCoinData();
   }
 
   sendMessage(value:any){
@@ -34,5 +40,12 @@ export class AboutusComponent implements OnInit {
   setTimeout(()=>{
     this.isSubmit = false;
   },4000);
+  }  getCoinData(){
+    this.apiCoin.getCurrencyTrending()
+    .subscribe(res=>{
+      console.log(res)
+      this.coinData = res
+    })
   }
+
 }

@@ -1,8 +1,149 @@
+<div class="dashBoard">
+  <header>
+  <!-- Sidebar -->
+  <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white">
+    <div class="position-sticky">
+      <div class="list-group list-group-flush mx-3">
+       
+        <a href="#" class="list-group-item list-group-item-action py-2 ripple" aria-current="true">
+          <i class="fa-solid fa-house fa-fw me-3"></i>
+          <span>Dashboard</span>
+        </a>
 
-<div class="container mt-5">
-    <div class="row">
-      <div class="services">
-       <h5>KryptoPesa Wallet and Transaction History - db</h5>
+        <a href="#" class="list-group-item list-group-item-action py-2 ripple active">
+          <i class="fa-solid fa-user fa-fw me-3"></i>
+          <span>User</span>
+        </a>
+
+        <a href="#"  routerLink="/login"  class="list-group-item list-group-item-action py-2 ripple"><i
+            class="fas fa-lock fa-fw me-3"></i>
+            <span>Sign Out </span>
+          </a>
+            
+        <a href="#" class="list-group-item list-group-item-action py-2 ripple">
+            <i class="fa-solid fa-envelope fa-fw me-3"></i>
+            <span>Confirm Email</span>
+          </a>
+
+        <a href="#" class="list-group-item list-group-item-action py-2 ripple">
+          <i class="fa-solid fa-lock fa-fw me-3"></i>
+          <span>Recover Password</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+  <!-- Sidebar -->
+
+  <!-- Navbar -->
+  <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+    <!-- Container wrapper -->
+    <div class="container-fluid">
+      <!-- Toggle button -->
+      <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#sidebarMenu"
+        aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <!-- Brand -->
+      <a class="navbar-brand" href="#">
+         <img src="../../assets/preloader.gif" alt="" width="25" height="25" class="d-inline-block align-text-top img-fluid"> 
+        <span style="color:  black;" class="">
+          Krypto</span> 
+          <span style="color:  #FF971D;" class="fw-bold">Pesa</span>   
+      </a>
+  
+      <div style="margin-left: 8%;">
+        <h2 class="dashboard-icon d-none d-md-flex input-group w-auto my-auto">
+          <span><i class="fa-solid fa-left-long ml-2 mt-2"></i></span>
+          Dashboard</h2>
+      </div>
+   
+
+      <!-- Right links -->
+      <ul class="navbar-nav ms-auto d-flex flex-row">
+        <!-- Notification dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link me-3 me-lg-0 hidden-arrow" href="#" id="navbarDropdownMenuLink"
+            role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+            <i class="fa-regular fa-bell"></i>
+          </a>
+        </li>
+      
+        <!-- User-->
+        <li class="nav-item">
+          <a class="nav-link hidden-arrow d-flex align-items-center" href="#"
+            id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+            <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img (31).webp" class="rounded-circle"
+              height="20" alt="Avatar" loading="lazy" />
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- Container wrapper -->
+  </nav>
+  <!-- Navbar -->
+</header>
+<!--Main Navigation-->
+
+<!--Main layout-->
+<main>
+  <div class="container p-3">
+    <div class="dash-table">
+      <div class="container">
+        <div class="row">
+          <div class="account col-md-8">
+            <h1>Api Table</h1>
+
+          </div>
+          <div class="col-md-4 d-flex" style="float:left;">
+              <button type="submit" class="auth1 btn text-center me-2">Pay</button>
+               <button type="submit" class="auth1 btn btn-lg text-center">+ Crypto</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="account col-md-4">
+        <h2>Account Balance</h2>
+        <div class="d-flex">
+          <button type="submit" class="auth1 btn text-center me-2">Send</button>
+           <button type="submit" class="auth1 btn btn-lg text-center">Make Payment</button>
+      </div>
+
+      </div>
+      <div class="account col-md-4">
+        <h2> Transaction History </h2>
+
+      </div>
+      <div class="account col-md-4">
+        <h1> KryptoSolana</h1>
+        <img src="" alt="">
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="account col-md-8">
+        <h2>Market overlay</h2>
+
+      </div>
+
+      <div class="account col-md-4">
+        <h2>History</h2>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</main>
+<!--Main layout-->
+
+</div>
+<!--Main Navigation-->

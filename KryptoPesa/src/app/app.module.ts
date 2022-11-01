@@ -64,8 +64,6 @@ import { NgxMatIntlTelInputComponent } from 'ngx-mat-intl-tel-input';
     NgOtpInputModule,
     NgxMatIntlTelInputComponent
     
-    
-
   ],
   providers: [],
   bootstrap: [AppComponent]

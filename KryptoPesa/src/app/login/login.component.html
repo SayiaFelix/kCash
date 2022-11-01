@@ -8,8 +8,7 @@
                 <h2>Sign In</h2>
                 <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
             </div>
-            <hr>
-            <div class="panel-body">
+            <div class="panel-body mt-3">
                <form [formGroup]="LoginForm" (ngSubmit)="login()">
                     <div class="form-group mb-2" [class.error]="LoginForm.controls['email'].dirty && LoginForm.hasError('required','email')">
                         <div class="input-field">
@@ -20,12 +19,11 @@
                 
                     <div class="form-group mt-3"  [class.error]="LoginForm.controls['password'].dirty && LoginForm.hasError('required','password')">
                         <input class="form-control" formControlName="password" placeholder="Enter password"  [type]="changepass?'password':'text'"  required>
-                        <span class="eyeicon" (click)="viewpass()"><i  [ngClass]="visible?'fa-solid fa-eye':'fa-solid fa-eye-slash'"></i></span>
+                        <span class="eyeicon eye"(click)="viewpass()"><i  [ngClass]="visible?'fa-solid fa-eye':'fa-solid fa-eye-slash'"></i></span>
                     </div>
                     <small *ngIf="LoginForm.controls['password'].dirty && LoginForm.hasError('required','password')"  class="text-danger">Password is required</small>
                    <br>
-                    <hr>
-                    <div>
+                    <div class="mt-2">
                         <input class=""  type="checkbox" name="remember" id="remember">
                         <span class="p-1">Remember Me?</span>
                         <p class="form-inline" style="float: right;"><a routerLink="/forget-password">Forget Password? </a></p>

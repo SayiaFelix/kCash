@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./homepage.component.css']
 })
 export class HomepageComponent implements OnInit {
-
+  coinData:any=[];
   dataSource!: MatTableDataSource<any>;
   displayedColumns: string[] = ['name', 'current_price', 'price_change_percentage_24h', 'market_cap'];
 
@@ -23,6 +23,7 @@ export class HomepageComponent implements OnInit {
 
   ngOnInit(): void {
     this.getCurrencyData();
+    this.getCoinData();
   
   }
 
@@ -47,5 +48,13 @@ export class HomepageComponent implements OnInit {
 
    getDetail(row:any){ 
     this.router.navigate(['coinDetail',row.id]);
- }
+ }  
+ 
+ getCoinData(){
+    this.apiCoin.getCurrencyTrending()
+    .subscribe(res=>{
+      console.log(res)
+      this.coinData = res
+    })
+}
 }
