@@ -28,6 +28,7 @@ import {MatInputModule} from '@angular/material/input';
 import { NgChartsModule } from 'ng2-charts';
 import { OtpComponent } from './otp/otp.component';
 import { NgOtpInputModule } from 'ng-otp-input';
+import { NgxMatIntlTelInputComponent } from 'ngx-mat-intl-tel-input';
 
 @NgModule({
   declarations: [
@@ -60,7 +61,9 @@ import { NgOtpInputModule } from 'ng-otp-input';
     MatInputModule,
 
     NgChartsModule,
-    NgOtpInputModule
+    NgOtpInputModule,
+    NgxMatIntlTelInputComponent
+    
     
 
   ],

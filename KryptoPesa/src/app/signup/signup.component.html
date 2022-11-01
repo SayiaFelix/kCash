@@ -1,9 +1,8 @@
 <div class="register">
   <div class="container mt-2">
     <div class="row">
-      <div class="col-md-3">
-      </div>
-      <div class="col-md-6">
+      <div class="col-md-3 col-sm-2"></div>
+      <div class="col-md-6 col-sm-8">
         <div class="card p-2">
           <div class="text-center mt-2">
              <h2>Sign Up</h2>
@@ -42,12 +41,11 @@
                 </div>
                 <div class="col-md-6">
                   <div class="form-group mb-2" [class.error]="SignupForm.controls['contact'].dirty && SignupForm.hasError('required','contact')">
-                    <label for="name">Mobile Phone</label>
+                    <label for="name">Phone No.</label>
                     <br>
-                    <input  class="form-control" type="number"  formControlName="contact" required>
+                    <input  class="form-control" type="number"  formControlName="contact" ng2telInput required>
                 </div> 
                 <small *ngIf="SignupForm.controls['contact'].dirty && SignupForm.hasError('required','contact')"  class="text-danger">Mobile Number Required </small>
-                  
                 </div>
               </div>
               <div class="row">
@@ -96,8 +94,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-3">
-      </div>
+      <div class="col-md-3 col-sm-2"></div>
     </div>
   </div>
 </div>
