@@ -4,6 +4,7 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { Router } from '@angular/router';
 import { NgToastService } from 'ng-angular-popup';
 import ValidateForm from '../Helper/validateForm';
+import { NavService } from '../service/nav.service';
 
 @Component({
   selector: 'app-login',
@@ -26,7 +27,8 @@ export class LoginComponent implements OnInit {
   constructor(private fb:FormBuilder,
      private http:HttpClient,
       private router:Router,
-      private toast: NgToastService
+      private toast: NgToastService,
+      private log: NavService
       ) { }
   
       ngOnInit(): void {
@@ -34,6 +36,7 @@ export class LoginComponent implements OnInit {
           email: ['', [Validators.required,Validators.email]],
           password: ['', Validators.required]
         });
+        this.log.show()
       }
         
     login(){

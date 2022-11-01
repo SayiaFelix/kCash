@@ -5,7 +5,7 @@
 .collapse li :hover {
     box-shadow: 0px 16px 16px 0px rgba(0, 0, 0, 0.15);
     transition: all 0.2s ease-in-out;
-    color: #5BC43B;
+    color: #FF971D;
  }
  .coinBar{
     height: 70px;
@@ -17,7 +17,7 @@
 .card {
     border: 0;
     background: transparent;
-    color: rgb(0, 0, 0);
+    color: #fff;
     height: 70px;
 }  
 .card img {
@@ -27,33 +27,3 @@
 .card h5 {
     font-weight: 500;
     }
-
-/* .header {
-        background-color: black;
-        padding-top: 20px;
-    }
-
-.content ul li {
-        margin-right: 20px;
-        display: inline-block;
-    }
-
-.content ul li a {
-        display: inline-block;
-        color: rgb(244, 245, 244);
-    }
-
-.content ul li i {
-        color: #5BC43B;
-        margin-right: 10px;
-        font-size: 17px;
-    }
-.content .left_info {
-        margin-left: -20% ;
-    }
-
-
-.content .right_info {
-    margin-left: -20% ;
-    text-align: right;
-    } */

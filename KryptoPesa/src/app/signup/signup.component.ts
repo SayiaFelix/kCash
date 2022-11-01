@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { NgToastService } from 'ng-angular-popup';
 import ValidateForm from '../Helper/validateForm';
 import { AuthService } from '../service/auth.service';
+import { NavService } from '../service/nav.service';
 
 @Component({
   selector: 'app-signup',
@@ -47,7 +48,8 @@ export class SignupComponent implements OnInit {
     private http:HttpClient,
     private router:Router,
     private toast:NgToastService,
-    private auth: AuthService
+    private auth: AuthService,
+    private log: NavService
     ) { }
 
   ngOnInit(): void {
@@ -62,6 +64,7 @@ export class SignupComponent implements OnInit {
   ,{
     validators: this.MatchPass('password','cpassword')
   })
+   this.log.show()
   }
 
   Signup(){

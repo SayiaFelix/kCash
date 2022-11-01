@@ -13,7 +13,7 @@ export class DashboardComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.nav.show()
+    this.nav.hide()
   }
 
 }

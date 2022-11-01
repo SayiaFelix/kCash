@@ -1,7 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
-
+body{
+    background-color: #202022;
+    color: #fff;
+     margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 .eyeicon{
     position: absolute;
     margin-top: -28px;
@@ -55,15 +60,7 @@
     color: #FF971D;
     border: #f9fcf8 solid 1px;
 }
-.register{
-    background-color:#202022;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 24px;
-    gap: 16px;
-}
+
 .register h2{
     color:#fff;
     font-size: 25px ;
@@ -82,7 +79,8 @@
     box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.25);
     border-radius: 8px;
     margin-top: 20px;
-    padding: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
    
 }
 .register .card form input {
@@ -96,7 +94,7 @@
 }
 
 .button_1 {
-    background-color: #5BC43B;
+    background-color: #FF971D;
     color: #fff;
     line-height: 45px;
     display: inline-block;
@@ -126,7 +124,7 @@
         transition: all 0.5s;
     }
     .scroll-top {
-        background-color: #5BC43B;
+        background-color: #202021;
         width: 50px;
         height: 50px;
         text-align: center;
@@ -139,7 +137,7 @@
     }
 
     .scroll-top:hover {
-        background-color: #f9b707;
+        background-color: #FF971D;
         color: #fff;
     }
 
@@ -153,7 +151,6 @@
     height: 300px;
     position: relative;
     z-index: 1;
-    margin-top: -14px;
 }
 
 .breadcrumb {
@@ -175,7 +172,7 @@
 
 .breadcrumb li a:hover {
     text-decoration: underline;
-    color: #5BC43B;
+    color: #FF971D;
 }
 
 .breadcrumb .active {
@@ -184,12 +181,7 @@
     font-weight: 700;
 }
 
-html, body { 
-    height: 100%;
- }
-body { margin: 0; 
-    font-family: Roboto, "Helvetica Neue", sans-serif;
-}
+
 /*
     Theme Responsive Design
 */

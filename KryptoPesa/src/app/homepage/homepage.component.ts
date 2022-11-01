@@ -4,6 +4,7 @@ import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
 import { Router } from '@angular/router';
+import { NavService } from '../service/nav.service';
 
 @Component({
   selector: 'app-homepage',
@@ -17,13 +18,16 @@ export class HomepageComponent implements OnInit {
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
-  constructor(private apiCoin:ApiService,
-    private router:Router)
+  constructor(
+    private apiCoin:ApiService,
+    private router:Router,
+    private home: NavService
+    )
      { }
 
   ngOnInit(): void {
     this.getCurrencyData();
-    this.getCoinData();
+    this.home.show()
   
   }
 
@@ -50,11 +54,4 @@ export class HomepageComponent implements OnInit {
     this.router.navigate(['coinDetail',row.id]);
  }  
  
- getCoinData(){
-    this.apiCoin.getCurrencyTrending()
-    .subscribe(res=>{
-      console.log(res)
-      this.coinData = res
-    })
-}
 }

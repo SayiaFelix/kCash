@@ -1,44 +1,16 @@
 
-    .collapse li {
-    padding: 5px;
-    transition: all 0.2s ease-in-out;
- }
-.collapse li :hover {
-    box-shadow: 0px 16px 16px 0px rgba(0, 0, 0, 0.15);
-    transition: all 0.2s ease-in-out;
-    color: #5BC43B;
- }
- .coinBar{
-    height: 70px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding-top: 5px;
- }
-.card {
-    border: 0;
-    background: transparent;
-    color: rgb(0, 0, 0);
-    height: 70px;
-}  
-.card img {
-    width: 30px;
-    margin: 0 auto;
-}
-.card h5 {
-    font-weight: 500;
-    }
-
     /*about Header */
 
     .about_section {
         position: relative;
         overflow: hidden;
-        z-index: 1;
+        z-index: 1; 
+        background-color: #fff;
+        color: #202021;
     }
 
     .about_section .section_heading h4 {
-        background-color: #000000;
+        background-color: #202021;
         color: #fff;
         display: inline-block;
         padding: 10px;
@@ -82,7 +54,7 @@
 
 .team-section {
     position: relative;
-    padding-top: 115px;
+    padding-top: 80px;
 }
 
 

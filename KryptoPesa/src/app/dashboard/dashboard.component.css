@@ -1,7 +1,20 @@
-.dashBoard{
-  background-color: #202021;
-  color: #fff;
-}
+
+.scroll {
+        background-color: #FF971D;
+        width: 25px;
+        height: 25px;
+        text-align: center;
+        font-size: 20px;
+        color: #fff;
+        border-radius: 2px;
+     
+
+    }
+
+    .scroll:hover {
+        background-color: #f9b707;
+        color: #fff;
+    }
 .account{
   background: #202022;
   box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.25);
@@ -12,7 +25,7 @@
   flex-grow: 0;
 }
 body {
-    background-color: #fbfbfb;
+    background-color: #202021;
   }
   @media (min-width: 991.98px) {
     main {

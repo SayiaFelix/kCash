@@ -9,7 +9,7 @@ visible :boolean=true;
   constructor() {
     this.visible
    }
-  hide(){this.visible = true;}
-  show(){this.visible = false;}
+  hide(){this.visible = false;}
+  show(){this.visible = true;}
   doSomething(){}
 }
