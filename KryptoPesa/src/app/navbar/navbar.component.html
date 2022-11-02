@@ -53,11 +53,15 @@
                         <div class="col-md-12 col-sm-12">
                           <div class="card">
                                 <img [src]="row.image" class="img-fluid" alt="">
-                                    <h5 class="text-center">
-                                      <span style="color:#fff;">{{row.name}}</span>
-                                      <span style="color:#f9b707;padding: 2px;">({{row.symbol | uppercase}})</span> <br>
+                                <div class="">
+                                   <h5 class="text-center">
+                                      <!-- <span style="color:#fff;">{{row.name}}</span> -->
+                                      <span style="color:#f9b707;padding: 2px;">({{row.symbol | uppercase}})</span> 
+                                      <br>
                                       <span class="fw-bold">{{row.current_price | currency}}</span> 
                                     </h5>
+                                </div>
+                                   
                             </div>
                         </div>
     

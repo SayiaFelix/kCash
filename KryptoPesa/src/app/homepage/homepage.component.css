@@ -40,6 +40,7 @@
    background-position: center center;
    -webkit-background-size: cover;
    background-size: cover;
+   width: 100%;
   
 }
 .promo_padding {
@@ -142,12 +143,10 @@ table {
    font-size: 18px;
 }
 
-/* :host ::ng-deep .mat-paginator-outer-container {
-   background-color: f9b707 ;
-} */
 
 :host ::ng-deep tr.mat-header-row {
    background-color: #f9b707 ;
+   width: 100%;
 }
 
 :host ::ng-deep tr.mat-row {

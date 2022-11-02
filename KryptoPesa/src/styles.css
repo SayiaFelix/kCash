@@ -206,20 +206,12 @@ body{
     width: 180px;
     margin-left: 23%;
 }
-.sm-padding {
-        padding: 15px;
-    }
-    .main_slide {
-        height: 510px;
-    }
-    .slider-text h1 {
-        font-size: 22px;
-    }
-    .callback_men,
-    .about_image {
+
+
+.about_image {
         display: none;
     }
-    .about_section .about_content {
+.about_content {
         padding: 0;
     }
  
@@ -260,21 +252,9 @@ body{
     p br {
         display: none;
     }
-    .padding {
-        padding: 60px 0;
-    }
-  
     .page_header {
         height: 300px;
     }
-    .breadcrumb {
-        right: auto;
-        top: auto;
-        bottom: -50px;
-        left: -15px;
-        margin: 0;
-    }
-
 }
 
 /* ---- End of max-width 767px CSS ---- */
@@ -289,59 +269,23 @@ body{
     width: 180px;
     margin-left: 26%;
 }
-
 .coinBar{
-    height: 50px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding-top: 5px;
+    width: 100%;
  }
-
-
+.card {
+    margin-right: 15px;
+}  
+.card img {
+    width: 20px;
+}
 .card h5 {
- font-size: 10px;
-    }
+font-size: 9px;
+}
 
-    .col-xs-6 {
-        float: none;
-        width: 100%;
-    }
-    .slider-text h1 {
-        font-size: 16px;
-        line-height: 18px;
-        margin-bottom: 3px;
-    }
-    .slider-text h1 span {
-        background: none;
-        margin: 0;
-        padding: 0;
-    }
-    .slider-text h1 br {
-        display: none;
-    }
-    .slider-text .button_1 {
-        display: none !important;
-    }
-    .nivo-controlNav {
-        bottom: 5px;
-    }
-    .coment-form .form-group .col-sm-4 {
-        margin-bottom: 15px;
-        margin-top: auto;
-    }
-    .coment-form .form-group .col-sm-4:last-child {
-        margin: 0;
-    }
+
 }
 
 /* ---- End of max-width 480px CSS ---- */
-
-/* ---- Start of max-width 420px CSS ---- */
-
-@media all and (max-width: 420px) {}
-
-/* ---- End of max-width 420px CSS ---- */
 
 
 /* ---- Start of max-width 380px CSS ---- */
@@ -357,6 +301,17 @@ body{
     width: 165px;
     margin-left: 21%;
 }
+.coinBar{
+    width: 100%;
+ }
+
+.card img {
+    width: 8px;
+}
+.card h5 {
+font-size: 5px;
+}
+
 }
 
 /* ---- End of max-width 380px CSS ---- */
