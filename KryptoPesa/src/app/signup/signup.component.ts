@@ -17,6 +17,7 @@ export class SignupComponent implements OnInit {
   public SignupForm!: FormGroup; 
   visible:boolean=false;
   changepass:boolean = true;
+  private _registerUrl = "http://localhost:3000/users/"
 
   viewpass(){
     this.visible = !this.visible;
@@ -57,7 +58,7 @@ export class SignupComponent implements OnInit {
       firstname: ['', Validators.required],
       lastname: ['', Validators.required],
       email: ['', [Validators.required,Validators.email]],
-      contact: ['', Validators.required],
+      contact: ['', [Validators.required,Validators.pattern("^((\\+254-?)|0)?[0-9]{12}$")]],
       password: ['', [Validators.required,Validators.minLength(8),Validators.maxLength(16)]],
       cpassword: ['', Validators.required]
   }
@@ -70,14 +71,14 @@ export class SignupComponent implements OnInit {
   Signup(){
     if(this.SignupForm.valid){
       console.log(this.SignupForm.value);
-      this.http.post<any>("http://localhost:3000/users/",this.SignupForm.value)
+      this.http.post<any>(this._registerUrl,this.SignupForm.value)
       .subscribe(res=>{
-        this.toast.success({detail:'Success Message',summary:"Signed In Successfully!!",duration:5000})
+        this.toast.success({detail:'Success Message',summary:"Registration Completed Successfully!!",duration:5000})
         // alert('Signup successfully');
         this.SignupForm.reset();
        this.router.navigate(['login']);
        },err=>{
-        this.toast.error({detail:'Failed Message',summary:"Email Failed, Something Went wrong!!",duration:5000})
+        this.toast.error({detail:'Failed Message',summary:"Registration Failed, Something Went wrong!!",duration:5000})
         // alert('something went wrong')
   
      })

@@ -10,15 +10,15 @@ import ValidateForm from '../Helper/validateForm';
 })
 export class AuthService {
 
-  
-  constructor(
-     private http:HttpClient, 
-     private fb:FormBuilder,
-    private router:Router,
-    private toast:NgToastService
-    ) { }
+  private _registerUrl = "http://localhost:3000/users/"
+  constructor(private http:HttpClient) { }
 
-  Register(){
-    
+
+  registerUser(user: any){
+    return this.http.post<any>(this._registerUrl,user)  
+  }
+
+  loginUser(user: any){
+    return this.http.get<any>(this._registerUrl,user)  
   }
 }

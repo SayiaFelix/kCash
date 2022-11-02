@@ -1,9 +1,10 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { NgToastService } from 'ng-angular-popup';
 import ValidateForm from '../Helper/validateForm';
+import { AuthService } from '../service/auth.service';
 import { NavService } from '../service/nav.service';
 
 @Component({
@@ -14,9 +15,9 @@ import { NavService } from '../service/nav.service';
 export class LoginComponent implements OnInit {
 
   public LoginForm!: FormGroup; 
-
   visible:boolean=false;
   changepass:boolean = true;
+  private _loginUrl = "http://localhost:3000/users/"
 
   viewpass(){
     this.visible = !this.visible;
@@ -28,7 +29,8 @@ export class LoginComponent implements OnInit {
      private http:HttpClient,
       private router:Router,
       private toast: NgToastService,
-      private log: NavService
+      private log: NavService,
+      private auth: AuthService
       ) { }
   
       ngOnInit(): void {
@@ -43,24 +45,20 @@ export class LoginComponent implements OnInit {
       if(this.LoginForm.valid){
         // send obj to db
         console.log(this.LoginForm.value);
-        this.http.get<any>("http://localhost:3000/users/")
+        this.http.get<any>(this._loginUrl)
         .subscribe(res=>{
           const user = res.find((a:any)=>{
-    
           return a.email === this.LoginForm.value.email &&
           a.password === this.LoginForm.value.password
           });
           if(user){
             // alert('Login Successfully');
             this.toast.success({detail:'SUCCESS!!!!',summary:"Login Successfully!!",duration:5000})
-            // this.toast.info({detail:'Welcome Message',summary:"Welcome to our Dashboard!!",duration:5000})
             this.LoginForm.reset();
             this.router.navigate(['dashboard']);
           }
           else{
-            this.toast.error({detail:'FAILED!!!',summary:"Login Failed!!",duration:5000})
-            // this.toast.warning({detail:'Warming Message',summary:"User Not Found,Use Correct Details!!",duration:5000})
-            // alert('User not found')
+            this.toast.error({detail:'FAILED!!!',summary:"Login Failed!! User Not Found",duration:5000})
           } 
         },
         err=>{

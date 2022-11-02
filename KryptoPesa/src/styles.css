@@ -186,13 +186,27 @@ body{
     Theme Responsive Design
 */
 
-@media (max-width: 1024px) {}
+@media (max-width: 1024px) {
+.eyeicon{
+    margin-left: 41%;
+}
+.auth{
+    width: 180px;
+    margin-left: 30%;
+}
+}
 
 /* ---- Start of max-width 992px CSS ---- */
 
 @media (max-width: 992px) {
-
-    .sm-padding {
+.eyeicon{
+    margin-left: 38%;
+}
+.auth{
+    width: 180px;
+    margin-left: 23%;
+}
+.sm-padding {
         padding: 15px;
     }
     .main_slide {
@@ -222,9 +236,16 @@ body{
 /* ---- Start of max-width 767px CSS ---- */
 
 @media all and (max-width: 767px) {
+.eyeicon{
+    margin-left: 91%;
+}
+.auth{
+    width: 190px;
+    margin-left: 32%;
+}
     body,
     p {
-        font-size: 12px;
+        font-size: 14px;
         line-height: 22px;
     }
     h1 {
@@ -261,6 +282,14 @@ body{
 /* ---- Start of max-width 480px CSS ---- */
 
 @media all and (max-width: 480px) {
+.eyeicon .eye{
+    margin-left: 90%;
+}
+.auth{
+    width: 180px;
+    margin-left: 26%;
+}
+
 .coinBar{
     height: 50px;
     display: flex;
@@ -314,8 +343,20 @@ body{
 
 /* ---- End of max-width 420px CSS ---- */
 
+
 /* ---- Start of max-width 380px CSS ---- */
 
-@media all and (max-width: 380px) {}
+@media all and (max-width: 380px) {
+.eyeicon{
+    margin-left: 87%;
+}
+.eye{
+    margin-left: 85%;
+}
+.auth{
+    width: 165px;
+    margin-left: 21%;
+}
+}
 
 /* ---- End of max-width 380px CSS ---- */

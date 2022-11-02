@@ -29,7 +29,9 @@ import { NgChartsModule } from 'ng2-charts';
 import { OtpComponent } from './otp/otp.component';
 import { NgOtpInputModule } from 'ng-otp-input';
 import { NgxMatIntlTelInputComponent } from 'ngx-mat-intl-tel-input';
+import { NgxMaskModule, IConfig } from 'ngx-mask'
 
+export const options: Partial<null|IConfig> | (() => Partial<IConfig>) = null;
 @NgModule({
   declarations: [
     AppComponent,
@@ -62,7 +64,8 @@ import { NgxMatIntlTelInputComponent } from 'ngx-mat-intl-tel-input';
 
     NgChartsModule,
     NgOtpInputModule,
-    NgxMatIntlTelInputComponent
+    NgxMatIntlTelInputComponent,
+    NgxMaskModule.forRoot(),
     
   ],
   providers: [],
