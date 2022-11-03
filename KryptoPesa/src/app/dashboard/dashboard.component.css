@@ -34,7 +34,7 @@
 .sidenav a {
   padding: 6px 6px 6px 32px;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 15px;
   color: #737373;
   display: block;
   font-family: 'Poppins';
@@ -46,7 +46,7 @@
 
 .sidenav a:hover {
   color: #FF971D;
-  font-size: 17px;
+  font-size: 16px;
 }
 
 .main {
@@ -55,8 +55,8 @@
 }
 
 @media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+  .sidenav {padding-top: 13px;}
+  .sidenav a {font-size: 16px;}
 }
 
   .auth1{
@@ -73,6 +73,23 @@
 }
 
 .auth1:hover {
+    background-color: white;
+    color: #FF971D;
+    border: #f9fcf8 solid 1px;
+}
+ .pay{
+    background: #00EC42;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 19px;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+
+}
+.pay:hover {
     background-color: white;
     color: #FF971D;
     border: #f9fcf8 solid 1px;

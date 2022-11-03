@@ -214,7 +214,9 @@ body{
 .about_content {
         padding: 0;
     }
- 
+ .volume {
+        display: none;
+    }
 }
 
 /* ---- End of max-width 992px CSS ---- */
@@ -311,7 +313,9 @@ font-size: 9px;
 .card h5 {
 font-size: 5px;
 }
-
+#volume{
+    display: none;
+}
 }
 
 /* ---- End of max-width 380px CSS ---- */

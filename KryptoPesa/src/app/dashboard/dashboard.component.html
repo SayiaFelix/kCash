@@ -41,14 +41,9 @@
               <h2><span class="scroll"><i class="fa-solid fa-left-long"></i></span>
               Dashboard</h2> 
         </a>
-        <div class="d-flex nav-item" style="margin-top: -5%; margin-left: 80%;">
-            <button type="submit" class="auth1 btn btn-lg text-center me-2">
-              <a style="text-decoration: none;" routerLink="/homepage" href="">Home</a></button>
-            <button class="btn button_1"> 
-              <a class="nav-link" routerLink="/login" routerLinkActive="active">
-                Sign Out
-              </a>
-            </button>
+        <div class="d-flex nav-item" style="margin-top: -5%; margin-left: 90%;">
+            <button type="submit" class="button_1 btn">
+              <a style="text-decoration: none; color: #fff;" routerLink="/homepage" href="">Home</a></button>
         </div>
       </div>
       <hr>
@@ -65,7 +60,6 @@
                           <th>Current Price</th>
                           <th>24h high</th>
                           <th>24h low</th>
-                          <!-- <th>24h Change</th> -->
                           <th>24h Volume</th>
                         </tr>
                       </thead>
@@ -75,28 +69,26 @@
                           <td><span class="value">{{solData?.market_data.current_price.usd | currency}}</span></td>
                           <td>{{solData?.market_data.high_24h.usd | currency}}</td>
                           <td>{{solData?.market_data.low_24h.usd | currency}}</td>
-                          <!-- <td>{{solData?.market_data.atl_change_percentage.usd | currency}}</td> -->
                           <td>{{solData?.market_data.market_cap.usd | currency}}</td>
                         </tr>
                       </tbody>
                   </table>
                </div>
              </div>
-             <div class="col-md-3 d-flex">
+             <div class="col-md-2 mr-1">
                 <button type="submit" class="auth1 btn btn-lg text-center">Payments</button> 
             </div> 
           </div>
         </div>
       </div>
     </div>
-
     <div class="container mt-3 m-2">
       <div class="row">
         <div class="account col-md-4">
           <h2>Account Balance in Wallet</h2>
           <div class="d-flex">
             <button type="submit" class="auth1 btn text-center me-2">Send</button>
-            <button type="submit" style="background: #00EC42;" class="auth1 btn btn-lg text-center">Make Payment</button>
+            <button type="submit" class="pay btn btn-lg text-center">Make Payment</button>
         </div>
 
         </div>
@@ -119,7 +111,7 @@
           <h2 class="mt-1">Market Overview</h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             <div class="dropdown">
-              <button class="btn dropbtn">Weekly
+              <button class="btn dropbtn">Weekly(2022)
                 <i class="fa-solid fa-chevron-down"></i>
               </button>
                 <div class="dropdown-content">

@@ -20,6 +20,7 @@
    font-size: 50px;
    font-weight: bold;
    margin-top: 7%;
+   margin-left: -7%;
 }
 .header h6{
    margin-top: 3%;
@@ -28,6 +29,7 @@
    font-weight: 400;
    text-transform: capitalize;
    letter-spacing: 0.00714em;
+   margin-left: -7%;
 }
 
 /* Promo section */
@@ -136,7 +138,7 @@ table {
 
 
 :host ::ng-deep tr.mat-header-row {
-   background-color: #f9b707 ;
+   background-color: #f9b707;
    width: 100%;
 }
 
