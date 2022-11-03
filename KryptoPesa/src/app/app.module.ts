@@ -24,12 +24,20 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatSortModule} from '@angular/material/sort';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule } from '@angular/material/core';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
+import {MatDialogModule} from '@angular/material/dialog';
 
 import { NgChartsModule } from 'ng2-charts';
 import { OtpComponent } from './otp/otp.component';
 import { NgOtpInputModule } from 'ng-otp-input';
 import { NgxMatIntlTelInputComponent } from 'ngx-mat-intl-tel-input';
-import { NgxMaskModule, IConfig } from 'ngx-mask'
+import { NgxMaskModule, IConfig } from 'ngx-mask';
+import { DialogComponent } from './dialog/dialog.component'
 
 export const options: Partial<null|IConfig> | (() => Partial<IConfig>) = null;
 @NgModule({
@@ -45,7 +53,8 @@ export const options: Partial<null|IConfig> | (() => Partial<IConfig>) = null;
     FooterComponent,
     KryptoPriceComponent,
     ForgetPasswordComponent,
-    OtpComponent
+    OtpComponent,
+    DialogComponent
   ],
   imports: [
     BrowserModule,
@@ -61,6 +70,13 @@ export const options: Partial<null|IConfig> | (() => Partial<IConfig>) = null;
     MatSortModule,
     MatFormFieldModule,
     MatInputModule,
+    MatSelectModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatRadioModule,
+    MatIconModule,
+    MatButtonModule,
+    MatDialogModule,
 
     NgChartsModule,
     NgOtpInputModule,

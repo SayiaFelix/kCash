@@ -23,7 +23,8 @@ export class DashboardComponent implements OnInit {
   days : number=1;
  
 
-  public barChartData: ChartConfiguration['data'] = {
+ 
+  public lineChartData: ChartConfiguration['data'] = {
     datasets: [
       {
         data: [],
@@ -39,7 +40,7 @@ export class DashboardComponent implements OnInit {
     ],
     labels: []
   };
-  public barChartOptions: ChartConfiguration['options'] = {
+  public lineChartOptions: ChartConfiguration['options'] = {
     elements: {
       point: {
         radius: 1
@@ -50,9 +51,9 @@ export class DashboardComponent implements OnInit {
       legend: { display: true },
     }
   };
-  public barChartType: ChartType = 'bar';
+  public lineChartType: ChartType = 'line';
 
-  @ViewChild(BaseChartDirective) myBarChart !: BaseChartDirective;
+  @ViewChild(BaseChartDirective) myLineChart !: BaseChartDirective;
 
   constructor(
     private nav: NavService,
@@ -79,14 +80,14 @@ export class DashboardComponent implements OnInit {
     this.solApi.getSolanaDataGraphically(this.days)
     .subscribe(res=>{
       setTimeout(()=>{
-        this.myBarChart.chart?.update();
+        this.myLineChart.chart?.update();
       },100)
 
       console.log(res)
-      this.barChartData.datasets[0].data =res.prices.map((a:any)=>{
+      this.lineChartData.datasets[0].data =res.prices.map((a:any)=>{
         return a[1];
       });
-      this.barChartData.labels = res.prices.map((a:any)=>{
+      this.lineChartData.labels = res.prices.map((a:any)=>{
         let date = new Date(a[0]);
         let time = date.getHours() > 12 ?
         `${date.getHours() - 12}: ${date.getMinutes()} PM` :
