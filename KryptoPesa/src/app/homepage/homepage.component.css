@@ -86,15 +86,6 @@ table {
  td, th {
    width: 25%;
  }
-/* Testimonial section */
-/* .testimonial_section {
-   background-image: url(../../assets/testimonial-background.jpg);
-   background-repeat: no-repeat;
-   background-attachment: fixed;
-   background-position: center center;
-   -webkit-background-size: cover;
-   background-size: cover;
-} */
 
 .testimonial_section .section_heading h2 {
    color: #fff;

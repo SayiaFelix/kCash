@@ -20,5 +20,12 @@ getCurrencyDataGraphically(coinId:string,days: number){
 getCurrencyById(coinId:string){
     return this.http.get<any>(`https://api.coingecko.com/api/v3/coins/${coinId}`)
   }
+getSolanaCurrency(){
+    return this.http.get<any>(`https://api.coingecko.com/api/v3/coins/solana`)
+  }
+
+getSolanaDataGraphically(days: number){
+    return this.http.get<any>(`https://api.coingecko.com/api/v3/coins/solana/market_chart?vs_currency=usd&days=${days}`)
+  }
 
 }
