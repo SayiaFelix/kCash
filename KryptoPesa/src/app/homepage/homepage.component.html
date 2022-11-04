@@ -3,14 +3,19 @@
     <div class="container">
         <div class="header">
             <h2 class="">Pay With Your <br><br> Krypto Cash</h2>
-            <h6>Lorem ipsum dolor sit amet consecteteaque laudantium <br> quas, ommodi veniam tenetur reiciendis. Eveniet?</h6>
+            <h6>Lorem ipsum dolor sit amet consecteteaque laudantium <br>
+                 quas, ommodi veniam tenetur reiciendis. Eveniet?
+            </h6>
         </div>
     </div>
 </div>
 <section class="promo mt-5">
     <div class="container">
         <div class="text-center">
-            <h1 class="fw-bold">EASY WAY <span style="color:#f9b707;">TO START</span> WITH US</h1>
+            <h1 class="fw-bold">EASY WAY 
+                <span style="color:#f9b707;">TO START</span>
+                 WITH US
+            </h1>
              <p>Here are some  that we featured for choose your best</p>
             <img src="../../assets/s.png"  class="image-fluid"   alt="img">
             
@@ -52,7 +57,9 @@
 <div class="krypto mt-3">
         <div class="container">
             <div class="text-center">
-                <h1 class="fw-bold"> CryptoCurrency <span style="color:#f9b707;"> Prices </span> </h1>
+                <h1 class="fw-bold"> CryptoCurrency
+                     <span style="color:#f9b707;"> Prices </span>
+                 </h1>
                 <p>Here are some  that we featured for choose your best</p>
                 <img src="../../assets/s.png"  class="image-fluid"  alt="img">
             </div>
@@ -60,10 +67,13 @@
         <div class="container">
             <div class="row">
                 <mat-form-field appearance="standard">
-                    <mat-label class="text-light">
+                    <mat-label class="text-light fs-6">
                         Filter
                     </mat-label>
-                    <input matInput style="border-bottom: white;" (keyup)="applyFilter($event)" placeholder="Cryptocurrency" #input>
+                    <input matInput 
+                     (keyup)="applyFilter($event)"
+                      placeholder="Cryptocurrency"
+                      #input>
                 </mat-form-field>
           
                 <div class="mat-elevation-z8">
@@ -95,19 +105,22 @@
                                 <span class="mx-1">({{row.symbol | uppercase}})</span>
                             </td>
                         </ng-container>
-         
-
-                
                     
                     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-                    <tr mat-row  (click)="getDetail(row)" *matRowDef="let row; columns: displayedColumns;"></tr>
+                    <tr mat-row  (click)="getDetail(row)" 
+                       *matRowDef="let row; columns: displayedColumns;">
+                    </tr>
                 
                     <tr class="mat-row" *matNoDataRow>
-                        <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+                        <td class="mat-cell" colspan="4">No data matching the filter
+                             "{{input.value}}"
+                        </td>
                     </tr>
                     </table>
                 
-                    <mat-paginator [pageSizeOptions]="[10, 25, 50, 100]" aria-label="Select page of users"></mat-paginator>
+                    <mat-paginator [pageSizeOptions]="[10, 25, 50, 100]"
+                     aria-label="Select page of users">
+                    </mat-paginator>
                 </div>
             </div>
           </div>
@@ -118,7 +131,10 @@
 <section class="testimonial_section mt-5">
     <div class="container">
         <div class="section_heading text-center text-light">
-            <h1 class="fw-bold">What Our <span style="color: #f9b707;">Clients</span> Say</h1>
+            <h1 class="fw-bold">What Our
+                 <span style="color: #f9b707;">Clients</span>
+                  Say
+            </h1>
              <p>Here are some  that we featured for choose your best</p>
             <img src="../../assets/s.png" class="img-fluid" alt="banner">
         </div>

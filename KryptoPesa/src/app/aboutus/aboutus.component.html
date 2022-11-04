@@ -2,14 +2,16 @@
             <div class="container">
                 <div class="about_content">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item" ><a routerLink="/homepage" href=""> Home</a></li>
+                        <li class="breadcrumb-item" >
+                            <a routerLink="/homepage" href=""> Home</a>
+                        </li>
                         <li class="breadcrumb-item active">About Us</li>
                     </ol>
                 </div>
             </div>
-  </section>
+</section>
   
-  <section class="about_section">
+<section class="about_section">
     <div class="container">
         <div class="section_heading text-center mt-5">
             <h4>KryptoPesa</h4>
@@ -41,7 +43,7 @@
         </div>
     </div>
     <div class="about_image"></div>
-  </section>
+</section>
   
   <!-- <div class="container mt-3">
     <div class="row">
@@ -52,7 +54,7 @@
   </div>
    -->
   <!-- team-section -->
-  <div class="">
+<div class="">
     <div class="container">
       <section class="team-section centred">
           <div class="auto-container">
@@ -116,13 +118,8 @@
               </div>
           </div>
       </section>
-  </div>
-  
-  <!-- team-section end -->
-
-  </div>
-  
-  
+</div>
+<!-- Contactus -->
 <div class="contactus mt-5" >
     <div class="container">
         <div class="row">
@@ -137,25 +134,74 @@
                          <form [formGroup]="contactForm">      
                             <div class="row">
                                 <div class="col-md-6">
-                                    <div class="form-group mb-2" [class.error]="contactForm.controls['name'].dirty && contactForm.hasError('required','name')">
-                                        <input placeholder="Name" class="form-control" type="text" formControlName="name" required>
+                                    <div class="form-group mb-2"
+                                     [class.error]="contactForm.controls['name'].dirty &&
+                                      contactForm.hasError('required','name')">
+                                        <input 
+                                        placeholder="Name" 
+                                        class="form-control" 
+                                        type="text" 
+                                        formControlName="name" 
+                                        required>
                                     </div>                   
-                                    <small *ngIf="contactForm.controls['name'].dirty && contactForm.hasError('required','name')"  class="text-danger">Name is required</small>
+                                    <small
+                                       *ngIf="contactForm.controls['name'].dirty && 
+                                        contactForm.hasError('required','name')"  
+                                        class="text-danger">
+                                        Name is required
+                                    </small>
                                 </div>
                                 <div class="col-md-6">
-                                    <div class="form-group mb-2"  [class.error]="contactForm.controls['email'].dirty && contactForm.hasError('required','email')">
-                                        <input placeholder="Email" class="form-control" formControlName="email" type="email" required="required">
+                                    <div class="form-group mb-2" 
+                                     [class.error]="contactForm.controls['email'].dirty && 
+                                     contactForm.hasError('required','email')">
+                                        <input 
+                                        placeholder="Email" 
+                                        class="form-control" 
+                                        formControlName="email" 
+                                        type="email" 
+                                        required>
                                     </div>
-                                    <small  *ngIf="contactForm.controls['email'].dirty && contactForm.hasError('required','email')"  class="text-danger">Email is required</small>
-                                    <small *ngIf="contactForm.controls['email'].dirty && contactForm.hasError('email','email')"  class="text-danger">Input Email Format</small>
+                                    <small 
+                                     *ngIf="contactForm.controls['email'].dirty &&
+                                      contactForm.hasError('required','email')"  
+                                      class="text-danger">
+                                      Email is required
+                                    </small>
+                                    <small 
+                                        *ngIf="contactForm.controls['email'].dirty && 
+                                        contactForm.hasError('email','email')"  
+                                        class="text-danger">
+                                        Input Email Format
+                                    </small>
                                 </div>
                             </div>
-                        <div class="form-group mb-2" [class.error]="contactForm.controls['message'].dirty && contactForm.hasError('required','message')">
-                            <textarea placeholder="Your Message..." class="form-control" rows="5" id="comment"formControlName="message" required></textarea> 
+                        <div class="form-group mb-2" 
+                        [class.error]="contactForm.controls['message'].dirty &&
+                         contactForm.hasError('required','message')">
+                            <textarea 
+                                placeholder="Your Message..." 
+                                class="form-control" rows="5" 
+                                id="comment"
+                                formControlName="message" 
+                                required>
+                            </textarea> 
                         </div> 
-                        <small *ngIf="contactForm.controls['message'].dirty && contactForm.hasError('required','message')"  class="text-danger">Message is required</small>
-                        <button  type="reset" [disabled]="contactForm.invalid"  (click)="sendMessage(contactForm.value)" class="btn button_1 mt-1">Send Message</button>
-                        <p *ngIf="isSubmit" style="color: #5BC43B; font-size:20px; float: right;">{{submittedMessage}}</p>   
+                        <small 
+                           *ngIf="contactForm.controls['message'].dirty && 
+                            contactForm.hasError('required','message')"  
+                            class="text-danger">
+                            Message is required
+                        </small>
+                        <button  type="reset" [disabled]="contactForm.invalid" 
+                         (click)="sendMessage(contactForm.value)" 
+                         class="btn button_1 mt-1">
+                         Send Message
+                        </button>
+                        <p *ngIf="isSubmit" 
+                            style="color: #5BC43B; font-size:20px; float: right;">
+                            {{submittedMessage}}
+                        </p>   
                     </form>
              </div>
         </div>

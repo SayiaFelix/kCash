@@ -147,6 +147,6 @@ table {
 }
 :host ::ng-deep tr.mat-row :hover {
     transition: all 0.2s ease-in-out;
-    color: #000;
+    color: #f9b707;
     font-size: 15px ;
 }

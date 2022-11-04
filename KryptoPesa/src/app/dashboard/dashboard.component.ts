@@ -28,7 +28,7 @@ export class DashboardComponent implements OnInit {
     datasets: [
       {
         data: [],
-        label: `Price Trends`,
+        label: `Solana Price Trends`,
         backgroundColor: 'rgba(148,159,177,0.2)',
         borderColor: '#5BC43B',
         pointBackgroundColor: '#5BC43B',

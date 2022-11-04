@@ -1,1 +1,75 @@
+.litcoin{
+position: absolute;
+top: 0%;
+bottom: 0%;
+}
+.litcoin2{
+position: absolute;
+transform: rotate(49.35deg);
+}
+.monero{
+position: absolute;
+left: -4%;
+right: -99.14%;
+top: 63%;
+transform: rotate(82.48deg);
+width:150px;
+}
+.etherium{
+position: absolute;
+left: 24%;
+top: 93%;
+width:90px;
+transform: rotate(50.35deg);
+}
+.meno{
+position: absolute;
+left: 1%;
+bottom: -30%;
+transform: rotate(-68.25deg);
+}
+.meno2{
+position:absolute;
+right:50%;
+transform: rotate(-68.25deg);
+}
+.bitcoin2{
+position: absolute;
+left: 56.39%;
+right: -56.39%;
+top: 0%;
+bottom: 0%;
+transform: rotate(34.33deg);
+}
+.bit{
+position: absolute;
+width:70px;
+transform: rotate(82.48deg);
+}
+/* 
 
+
+.etherium2{
+position: absolute;
+left: 0%;
+right: 0%;
+top: 59.41%;
+bottom: -59.41%;
+transform: rotate(-36.45deg);
+}
+.litcoin2{
+position: absolute;
+left: -4.68%;
+right: 4.68%;
+top: 88.05%;
+bottom: -88.05%;
+transform: rotate(-68.02deg);
+}
+.bitcoin{
+position: absolute;
+left: 70.45%;
+right: -70.45%;
+top: 0%;
+bottom: 0%;
+transform: rotate(44.79deg);
+} */
