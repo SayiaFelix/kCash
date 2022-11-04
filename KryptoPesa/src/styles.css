@@ -4,7 +4,7 @@
 body{
     background-color: #202022;
     color: #fff;
-     margin: 0; 
+    margin: 0; 
     font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 .eyeicon{
@@ -108,6 +108,62 @@ body{
 .button_1:hover {
     background-color: black;
     color: #fff;
+}
+.bitcoin{
+position: absolute;
+left: 2%;
+right: -2%;
+transform: rotate(49.35deg);
+}
+.bitcoin2{
+    position: absolute;
+    left: 15%;
+    right: -15%;
+    top: 65%;
+    bottom: -65%;
+    transform: rotate(82.48deg);
+}
+.bitcoin3{
+    position: absolute;
+    left: 0.5%;
+    right: -0.5%;
+    top: 120%;
+    bottom: -120%;
+    transform: rotate(50.35deg);
+}
+.litcoin{
+    position: absolute;
+    left: 40%;
+    right: -40%;
+    top: 24%;
+    bottom: -24%;
+    transform: rotate(34.33deg);
+}
+.litcoin2{
+position: absolute;
+left: 90%;
+right: -90%;
+top: 120%;
+bottom: -120%;
+transform: rotate(-98.25deg);
+}
+.etherium{
+    position: absolute;
+    right: 20%;
+    top: 82%;
+    bottom: -82%;
+    transform: rotate(-68.02deg);
+}
+.etherium2{
+position: absolute;
+transform: rotate(44.79deg);
+}
+.etherium3{
+position: absolute;
+right: 1%;
+top: 55.41%;
+bottom: -55.41%;
+transform: rotate(-36.45deg);
 }
 
     /* Transition Effect */
