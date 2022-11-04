@@ -5,6 +5,9 @@ import {MatTableDataSource} from '@angular/material/table';
 import {animate, state, style, transition, trigger} from '@angular/animations';
 import{ChartConfiguration,ChartType}from  'chart.js'
 import { BaseChartDirective } from 'ng2-charts';
+import { MatDialog } from '@angular/material/dialog';
+import { DialogComponent } from '../dialog/dialog.component';
+import { NgToastService } from 'ng-angular-popup';
 
 @Component({
   selector: 'app-dashboard',
@@ -57,7 +60,10 @@ export class DashboardComponent implements OnInit {
 
   constructor(
     private nav: NavService,
-    private solApi : ApiService
+    private solApi : ApiService,
+    public dialog: MatDialog,
+    private toast:NgToastService,
+    private api : ApiService,
   ) { }
 
   ngOnInit(): void {
@@ -65,6 +71,57 @@ export class DashboardComponent implements OnInit {
     this.getSolDetail();
     this.getSolanaGraphData(this.days);
   }
+
+  openDialog() {
+    this.dialog.open(DialogComponent,{
+      width:'28%'
+    }).afterClosed().subscribe(val => {
+    if(val==='save'){
+        this.getAllProduct();
+      }
+    })
+  }
+
+  getAllProduct(){
+    this.api.getProduct()
+    .subscribe({
+      next:(res)=>{
+        console.log(res)
+
+      },
+      error:(err)=>{
+        this.toast.error({detail:'ERROR!!!',summary:"Error while recording/fetching the data!!",duration:5000})
+        // alert('error while recording/fetching the data')
+      }
+    })
+
+  }
+
+editProduct(row : any){
+   this.dialog.open(DialogComponent,{
+     width:'40%',
+     data:row
+}).afterClosed().subscribe(val => {
+  if(val==='update'){
+      this.getAllProduct();
+    }
+  })
+}
+
+deleteProduct(id : number){
+  this.api.deleteProduct(id)
+  .subscribe({
+    next:(res)=>{
+      alert("Product Deleted Successfully")
+       this.getAllProduct();
+    },
+    error:()=>{
+      this.toast.error({detail:'CANCELLED!!!',summary:"Error while Deleting the product!!",duration:5000})
+      // alert('Error while Deleting the product');
+    }
+  })
+
+}
 
   getSolDetail(){
     this.solApi.getSolanaCurrency()

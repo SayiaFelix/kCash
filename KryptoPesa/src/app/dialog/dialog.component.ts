@@ -11,7 +11,7 @@ import { ApiService } from '../service/api.service';
 })
 export class DialogComponent implements OnInit {
   productForm!: FormGroup
-  actionBtn : string= "save"
+
   
     constructor
     (
@@ -23,21 +23,14 @@ export class DialogComponent implements OnInit {
   
     ngOnInit(): void {
     this.productForm= this.formbuilder.group({
-      name: ['',Validators.required],
-      category: ['',Validators.required],
-      fresh: ['',Validators.required],
+      contact: ['',Validators.required],
       price: ['',Validators.required],
-      comment: ['',Validators.required],
       date: ['',Validators.required]
     })
   
   if(this.editData){
-    this.actionBtn='update'
-    this.productForm.controls['name'].setValue(this.editData.name);
-    this.productForm.controls['category'].setValue(this.editData.category);
+    this.productForm.controls['contact'].setValue(this.editData.contact);
     this.productForm.controls['date'].setValue(this.editData.date);
-    this.productForm.controls['fresh'].setValue(this.editData.fresh);
-    this.productForm.controls['comment'].setValue(this.editData.comment);
     this.productForm.controls['price'].setValue(this.editData.price);
   }
   }
