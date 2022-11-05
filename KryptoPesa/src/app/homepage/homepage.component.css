@@ -13,7 +13,6 @@
    display: flex;
    flex-direction: column;
    justify-content: center;
-
 }
 .header h1{
    color: #fff;

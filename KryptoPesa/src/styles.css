@@ -223,17 +223,16 @@ transform: rotate(-36.45deg);
 .breadcrumb li a {
     font-weight: 700;
     text-transform: uppercase;
-    color: #ddd;
+    color: #fff;
     text-decoration: none;
 }
 
 .breadcrumb li a:hover {
-    text-decoration: underline;
     color: #FF971D;
 }
 
 .breadcrumb .active {
-    color: #f9b707;
+    color: #5BC43B;
     text-transform: uppercase;
     font-weight: 700;
 }
