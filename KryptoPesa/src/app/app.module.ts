@@ -37,7 +37,8 @@ import { OtpComponent } from './otp/otp.component';
 import { NgOtpInputModule } from 'ng-otp-input';
 import { NgxMatIntlTelInputComponent } from 'ngx-mat-intl-tel-input';
 import { NgxMaskModule, IConfig } from 'ngx-mask';
-import { DialogComponent } from './dialog/dialog.component'
+import { DialogComponent } from './dialog/dialog.component';
+import { Dialog2Component } from './dialog2/dialog2.component'
 
 export const options: Partial<null|IConfig> | (() => Partial<IConfig>) = null;
 @NgModule({
@@ -54,7 +55,8 @@ export const options: Partial<null|IConfig> | (() => Partial<IConfig>) = null;
     KryptoPriceComponent,
     ForgetPasswordComponent,
     OtpComponent,
-    DialogComponent
+    DialogComponent,
+    Dialog2Component
   ],
   imports: [
     BrowserModule,

@@ -8,6 +8,7 @@ import { BaseChartDirective } from 'ng2-charts';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogComponent } from '../dialog/dialog.component';
 import { NgToastService } from 'ng-angular-popup';
+import { Dialog2Component } from '../dialog2/dialog2.component';
 
 @Component({
   selector: 'app-dashboard',
@@ -82,6 +83,15 @@ export class DashboardComponent implements OnInit {
     })
   }
 
+  openDialog2() {
+    this.dialog.open(Dialog2Component,{
+      width:'28%'
+    }).afterClosed().subscribe(val => {
+    if(val==='save'){
+        this.getAllProduct();
+      }
+    })
+  }
   getAllProduct(){
     this.api.getProduct()
     .subscribe({
