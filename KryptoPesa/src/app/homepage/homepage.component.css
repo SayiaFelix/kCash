@@ -3,7 +3,7 @@
 
 .banner{
     background-image: url('../../assets/10.jpg');
-    height: 450px;
+    height: 465px;
     width: 100%;
     background-size: cover;
 }
@@ -15,14 +15,14 @@
    justify-content: center;
 
 }
-.header h2{
+.header h1{
    color: #fff;
    font-size: 50px;
    font-weight: bold;
    margin-top: 7%;
    margin-left: -7%;
 }
-.header h6{
+.header h4{
    margin-top: 3%;
    color: rgb(254, 253, 255);
    font-size: 20px;
@@ -101,8 +101,8 @@ table {
 }
 
 .testimonial_item i {
-   color: #f9b707;
-   font-size: 40px;
+   color: #5BC43B;
+   font-size: 42px;
    margin-bottom: 10px;
 }
 

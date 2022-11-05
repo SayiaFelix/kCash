@@ -1,7 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ApiService } from '../service/api.service';
 import { NavService } from '../service/nav.service';
-import {MatTableDataSource} from '@angular/material/table';
 import {animate, state, style, transition, trigger} from '@angular/animations';
 import{ChartConfiguration,ChartType}from  'chart.js'
 import { BaseChartDirective } from 'ng2-charts';
@@ -50,9 +49,16 @@ export class DashboardComponent implements OnInit {
         radius: 1
       }
     },
+    responsive: true,
 
     plugins: {
-      legend: { display: true },
+      legend: {
+      display: true
+     },
+      title: {
+        display: true,
+        text: 'Solana Price Trends'
+      },
     }
   };
   public lineChartType: ChartType = 'line';
@@ -159,7 +165,6 @@ deleteProduct(id : number){
         let time = date.getHours() > 12 ?
         `${date.getHours() - 12}: ${date.getMinutes()} PM` :
         `${date.getHours() - 12}: ${date.getMinutes()} AM` 
-
         return this.days === 1 ? time : date.toLocaleDateString();
       })
 
