@@ -38,7 +38,7 @@ export class KryptoPriceComponent implements OnInit {
         radius: 1
       }
     },
-
+    responsive: true,
     plugins: {
       legend: { display: true },
     }
