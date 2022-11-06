@@ -32,7 +32,7 @@ export class FooterComponent implements OnInit {
   console.log(value)
   this.isSubmit = true;
   this.submittedMessage ='Submitted Successfully';
-  this.toast.success({detail:'SUCCESS!!!!',summary:"Subscribe Successfully!!",duration:3000})
+  this.toast.success({detail:'SUBSCRIBED!!!!',summary:"You have Subscribed Successfully!!",duration:3000})
 
   setTimeout(()=>{
     this.isSubmit = false;
