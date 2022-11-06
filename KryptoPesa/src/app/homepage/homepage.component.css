@@ -132,7 +132,9 @@ table {
 /* Table Price */
 :host ::ng-deep .mat-sort-header-content {
    color: #fff;
+   /* color: #5BC43B; */
    font-size: 18px;
+   font-weight: 800;
 }
 
 

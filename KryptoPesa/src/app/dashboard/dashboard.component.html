@@ -1,4 +1,4 @@
-<mat-progress-spinner value="accent" mode="indeterminate" *ngIf="loading$ | async"></mat-progress-spinner>
+
 
 <div class="dashBoard">
   <div class="sidenav">
@@ -9,6 +9,7 @@
           <span style="color: #fff;" class="">
             Krypto</span> 
             <span style="color:  #f9b707;" class="fw-bold">Pesa</span>   
+           
         </a>
     </div>
       
@@ -46,6 +47,10 @@
                 <i class="fa-solid fa-left-long"></i></span>
               Dashboard</h2> 
         </a>
+          <div  *ngIf="loading$ | async" class="spinner-border text-success text-center" role="status">
+            <span  class="visually-hidden">Loading...</span>
+          </div>
+            <!-- <mat-progress-spinner value="accent" mode="indeterminate" *ngIf="loading$ | async"></mat-progress-spinner> -->
         <div class="d-flex nav-item" style="margin-top: -5%; margin-left: 90%;">
             <button type="submit" class="button_1 btn">
               <a style="text-decoration: none; color: #fff;" routerLink="/homepage" href="">Home</a></button>
