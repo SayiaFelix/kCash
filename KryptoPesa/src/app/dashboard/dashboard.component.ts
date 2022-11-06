@@ -8,6 +8,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { DialogComponent } from '../dialog/dialog.component';
 import { NgToastService } from 'ng-angular-popup';
 import { Dialog2Component } from '../dialog2/dialog2.component';
+import { LoadingService } from '../service/loading.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -22,6 +23,7 @@ import { Dialog2Component } from '../dialog2/dialog2.component';
   ],
 })
 export class DashboardComponent implements OnInit {
+  loading$ = this.loader.loading$;
   solData: any;
   days : number=1;
  
@@ -71,6 +73,7 @@ export class DashboardComponent implements OnInit {
     public dialog: MatDialog,
     private toast:NgToastService,
     private api : ApiService,
+    private loader:LoadingService
   ) { }
 
   ngOnInit(): void {

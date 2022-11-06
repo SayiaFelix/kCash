@@ -4,6 +4,7 @@ import { ApiService } from '../service/api.service';
 
 import{ChartConfiguration,ChartType}from  'chart.js'
 import { BaseChartDirective } from 'ng2-charts';
+import { LoadingService } from '../service/loading.service';
 
 @Component({
   selector: 'app-krypto-price',
@@ -11,7 +12,7 @@ import { BaseChartDirective } from 'ng2-charts';
   styleUrls: ['./krypto-price.component.css']
 })
 export class KryptoPriceComponent implements OnInit {
-
+  loading$ = this.loader.loading$;
   coinData: any;
   coinId! :string;
   days : number=1;
@@ -50,6 +51,7 @@ export class KryptoPriceComponent implements OnInit {
 
   constructor(private coinApi : ApiService,
      private activateRoute : ActivatedRoute,
+     private loader:LoadingService
      ) { }
 
   ngOnInit(): void {

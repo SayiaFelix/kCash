@@ -14,7 +14,7 @@ import { FooterComponent } from './footer/footer.component';
 import { KryptoPriceComponent } from './krypto-price/krypto-price.component';
 import { NgToastModule } from 'ng-angular-popup';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ForgetPasswordComponent } from './forget-password/forget-password.component';
 
@@ -31,6 +31,7 @@ import {MatRadioModule} from '@angular/material/radio';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatDialogModule} from '@angular/material/dialog';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 import { NgChartsModule } from 'ng2-charts';
 import { OtpComponent } from './otp/otp.component';
@@ -39,6 +40,7 @@ import { NgxMatIntlTelInputComponent } from 'ngx-mat-intl-tel-input';
 import { NgxMaskModule, IConfig } from 'ngx-mask';
 import { DialogComponent } from './dialog/dialog.component';
 import { Dialog2Component } from './dialog2/dialog2.component'
+import { NetworkInterceptor } from './network.interceptor';
 
 export const options: Partial<null|IConfig> | (() => Partial<IConfig>) = null;
 @NgModule({
@@ -79,6 +81,7 @@ export const options: Partial<null|IConfig> | (() => Partial<IConfig>) = null;
     MatIconModule,
     MatButtonModule,
     MatDialogModule,
+    MatProgressSpinnerModule,
 
     NgChartsModule,
     NgOtpInputModule,
@@ -86,7 +89,11 @@ export const options: Partial<null|IConfig> | (() => Partial<IConfig>) = null;
     NgxMaskModule.forRoot(),
     
   ],
-  providers: [],
+  providers: [{
+     provide:HTTP_INTERCEPTORS,
+     useClass:NetworkInterceptor,
+     multi:true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

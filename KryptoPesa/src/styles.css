@@ -230,7 +230,13 @@ transform: rotate(-36.45deg);
 .breadcrumb li a:hover {
     color: #FF971D;
 }
-
+mat-progress-spinner{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 5;
+}
 .breadcrumb .active {
     color: #5BC43B;
     text-transform: uppercase;
@@ -270,9 +276,6 @@ transform: rotate(-36.45deg);
 .about_content {
         padding: 0;
     }
- .volume {
-        display: none;
-    }
 }
 
 /* ---- End of max-width 992px CSS ---- */
@@ -293,24 +296,25 @@ transform: rotate(-36.45deg);
     width: 190px;
     margin-left: 32%;
 }
-    body,
-    p {
+.card{border: none;}
+body,
+p {
         font-size: 14px;
         line-height: 22px;
-    }
-    h1 {
+}
+h1 {
         font-size: 30px;
     }
-    h2 {
+ h2 {
         font-size: 20px;
     }
-    h3 {
+ h3 {
         font-size: 16px;
     }
-    p br {
+p br {
         display: none;
     }
-    .page_header {
+.page_header {
         height: 300px;
     }
 }
@@ -332,6 +336,7 @@ transform: rotate(-36.45deg);
  }
 .card {
     margin-right: 15px;
+    border: none;
 }  
 .card img {
     width: 20px;
@@ -362,16 +367,14 @@ font-size: 9px;
 .coinBar{
     width: 100%;
  }
-
+.card{border: none;}
 .card img {
     width: 8px;
 }
 .card h5 {
 font-size: 5px;
 }
-#volume{
-    display: none;
-}
+
 }
 
 /* ---- End of max-width 380px CSS ---- */

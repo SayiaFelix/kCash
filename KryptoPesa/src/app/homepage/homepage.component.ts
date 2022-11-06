@@ -5,6 +5,7 @@ import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
 import { Router } from '@angular/router';
 import { NavService } from '../service/nav.service';
+import { LoadingService } from '../service/loading.service';
 
 @Component({
   selector: 'app-homepage',
@@ -12,6 +13,7 @@ import { NavService } from '../service/nav.service';
   styleUrls: ['./homepage.component.css']
 })
 export class HomepageComponent implements OnInit {
+  loading$ = this.loader.loading$;
   coinData:any=[];
   dataSource!: MatTableDataSource<any>;
   displayedColumns: string[] = ['name', 'current_price', 'price_change_percentage_24h', 'market_cap'];
@@ -21,7 +23,8 @@ export class HomepageComponent implements OnInit {
   constructor(
     private apiCoin:ApiService,
     private router:Router,
-    private home: NavService
+    private home: NavService,
+    private loader:LoadingService
     )
      { }
 
